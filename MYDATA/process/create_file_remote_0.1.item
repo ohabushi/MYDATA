@@ -112,7 +112,7 @@
   </parameters>
   <node componentName="tFileTouch" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileTouch_1" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;/Talend/Myfiles/remote.csv&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;/Talend/myFiles/remote.csv&quot;"/>
     <elementParameter field="CHECK" name="CREATEDIR" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileTouch_1"/>

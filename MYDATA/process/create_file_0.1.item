@@ -212,16 +212,14 @@
   </node>
   <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_q9LfAHUXEeaYeOpcKLMzDA" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;context.mdata_Server&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.mdata_Server"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;context.mdata_Port&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;context.mdata_Database&quot;"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;context.mdata_AdditionalParams&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;context.mdata_Login&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="ja4f9HM8d4tDoYYKRnuo0SmA8PCYqV6/5IWgGZKV2Ss="/>
+    <elementParameter field="TEXT" name="PORT" value="context.mdata_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.mdata_Database"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.mdata_AdditionalParams"/>
+    <elementParameter field="TEXT" name="USER" value="context.mdata_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kucMCxv8Kr5y09b+4mOqammb"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>

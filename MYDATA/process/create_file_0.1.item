@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
-  <context confirmationNeeded="false" name="Default"/>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="mdata_AdditionalParams" prompt="mdata_AdditionalParams?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="mdata_Database" prompt="mdata_Database?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="mydata"/>
+    <contextParameter comment="" name="mdata_Login" prompt="mdata_Login?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="root"/>
+    <contextParameter comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_Password" value="S0DL+5b+FnhrSabJQFszOw=="/>
+    <contextParameter comment="" name="mdata_Port" prompt="mdata_Port?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="3306"/>
+    <contextParameter comment="" name="mdata_Server" prompt="mdata_Server?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="localhost"/>
+  </context>
+  <context confirmationNeeded="false" name="prod">
+    <contextParameter comment="" name="mdata_AdditionalParams" prompt="mdata_AdditionalParams?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="mdata_Database" prompt="mdata_Database?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="mydata"/>
+    <contextParameter comment="" name="mdata_Login" prompt="mdata_Login?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="root"/>
+    <contextParameter comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_Password" value="S0DL+5b+FnhrSabJQFszOw=="/>
+    <contextParameter comment="" name="mdata_Port" prompt="mdata_Port?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="3306"/>
+    <contextParameter comment="" name="mdata_Server" prompt="mdata_Server?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="localhost"/>
+  </context>
+  <context confirmationNeeded="false" name="test">
+    <contextParameter comment="" name="mdata_AdditionalParams" prompt="mdata_AdditionalParams?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="mdata_Database" prompt="mdata_Database?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="mydata"/>
+    <contextParameter comment="" name="mdata_Login" prompt="mdata_Login?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="root"/>
+    <contextParameter comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_Password" value="S0DL+5b+FnhrSabJQFszOw=="/>
+    <contextParameter comment="" name="mdata_Port" prompt="mdata_Port?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="3306"/>
+    <contextParameter comment="" name="mdata_Server" prompt="mdata_Server?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="localhost"/>
+  </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
@@ -192,13 +215,13 @@
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_q9LfAHUXEeaYeOpcKLMzDA" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
-    <elementParameter field="TEXT" name="HOST" value="context.mdata_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;context.mdata_Server&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.mdata_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.mdata_Database"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.mdata_AdditionalParams"/>
-    <elementParameter field="TEXT" name="USER" value="context.mdata_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kucMCxv8Kr5y09b+4mOqammb"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;context.mdata_Port&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;context.mdata_Database&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;context.mdata_AdditionalParams&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;context.mdata_Login&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="ja4f9HM8d4tDoYYKRnuo0SmA8PCYqV6/5IWgGZKV2Ss="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>

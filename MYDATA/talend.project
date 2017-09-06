@@ -547,6 +547,7 @@
       <relatedItems xmi:id="_LcUwJJMAEee-U8C8FcSORw" id="MDM" version="Latest" type="routine"/>
       <relatedItems xmi:id="_LcUwJZMAEee-U8C8FcSORw" id="TalendStringUtil" version="Latest" type="routine"/>
       <relatedItems xmi:id="_3UUB4JMLEee-U8C8FcSORw" id="_q9LfAHUXEeaYeOpcKLMzDA" version="Latest" type="property"/>
+      <relatedItems xmi:id="_gUfasJMMEee-U8C8FcSORw" id="_3I04oHj2EeeCYMqEfIJM1Q" version="Latest" type="context"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_LcUwJpMAEee-U8C8FcSORw">
       <baseItem xmi:id="_LcUwJ5MAEee-U8C8FcSORw" id="_k24esHBYEeeLfuyKROmHcg" version="0.1" type="job"/>

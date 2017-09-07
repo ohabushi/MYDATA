@@ -751,10 +751,6 @@
     </ItemsRelations>
     <ItemsRelations xmi:id="_S3vhsJOrEee-U8C8FcSORw">
       <baseItem xmi:id="_S3vhsZOrEee-U8C8FcSORw" id="_WJyEUCqMEeeMHI82fR62hw" version="0.1" type="job"/>
-      <relatedItems xmi:id="_S3vhspOrEee-U8C8FcSORw" id="_BdIykEn7EeePFLrB05YKNg" version="Latest" type="context"/>
-      <relatedItems xmi:id="_S3vhs5OrEee-U8C8FcSORw" id="_u36XoOIiEeaklLKnYh-FIA" version="Latest" type="context"/>
-      <relatedItems xmi:id="_S3vhtJOrEee-U8C8FcSORw" id="_GkaGAEoJEeePFLrB05YKNg" version="Latest" type="context"/>
-      <relatedItems xmi:id="_S3vhtZOrEee-U8C8FcSORw" id="_IK6HkEn6EeePFLrB05YKNg" version="Latest" type="property"/>
       <relatedItems xmi:id="_S3vhtpOrEee-U8C8FcSORw" id="SQLike" version="Latest" type="routine"/>
       <relatedItems xmi:id="_S3vht5OrEee-U8C8FcSORw" id="Numeric" version="Latest" type="routine"/>
       <relatedItems xmi:id="_S3vhuJOrEee-U8C8FcSORw" id="TalendString" version="Latest" type="routine"/>
@@ -769,9 +765,7 @@
       <relatedItems xmi:id="_S3vhwZOrEee-U8C8FcSORw" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_S3vhwpOrEee-U8C8FcSORw" id="DQTechnical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_S3vhw5OrEee-U8C8FcSORw" id="DataQualityDependencies" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_S3vhxJOrEee-U8C8FcSORw" id="_RwQzcCqZEeeMHI82fR62hw - polystar_base_eu_roaming_cancellation" version="Latest" type="schema"/>
-      <relatedItems xmi:id="_S3vhxZOrEee-U8C8FcSORw" id="_YfVI8CqYEeeMHI82fR62hw - polystar_base_eu_roaming_tracking" version="Latest" type="schema"/>
-      <relatedItems xmi:id="_S3vhxpOrEee-U8C8FcSORw" id="_CGnh4CqVEeeMHI82fR62hw - polystar_raw_eu_roaming_loc_update" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_UBZ0AJOyEee-U8C8FcSORw" id="TalendStringUtil" version="Latest" type="routine"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_S3vhx5OrEee-U8C8FcSORw">
       <baseItem xmi:id="_S3vhyJOrEee-U8C8FcSORw" id="_i-lTsCpkEeeMHI82fR62hw" version="0.1" type="job"/>

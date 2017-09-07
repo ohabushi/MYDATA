@@ -857,8 +857,6 @@
     </ItemsRelations>
     <ItemsRelations xmi:id="_j7Qs0JOrEee-U8C8FcSORw">
       <baseItem xmi:id="_j7Qs0ZOrEee-U8C8FcSORw" id="_Yi8SQE9mEeeVXvDW-WKhWg" version="0.1" type="job"/>
-      <relatedItems xmi:id="_j7Qs0pOrEee-U8C8FcSORw" id="_hjrV0PjpEeaVAvjHUanqFA" version="Latest" type="property"/>
-      <relatedItems xmi:id="_j7Qs05OrEee-U8C8FcSORw" id="_8HPUEPjpEeaVAvjHUanqFA" version="Latest" type="property"/>
       <relatedItems xmi:id="_j7Qs1JOrEee-U8C8FcSORw" id="SQLike" version="Latest" type="routine"/>
       <relatedItems xmi:id="_j7Qs1ZOrEee-U8C8FcSORw" id="Numeric" version="Latest" type="routine"/>
       <relatedItems xmi:id="_j7Qs1pOrEee-U8C8FcSORw" id="TalendString" version="Latest" type="routine"/>
@@ -878,6 +876,7 @@
       <relatedItems xmi:id="_j7Qs5JOrEee-U8C8FcSORw" id="DQMainRule" version="Latest" type="routine"/>
       <relatedItems xmi:id="_j7Qs5ZOrEee-U8C8FcSORw" id="DateFromUnix" version="Latest" type="routine"/>
       <relatedItems xmi:id="_j7Qs5pOrEee-U8C8FcSORw" id="Date_Utils" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_j9cosJOsEee-U8C8FcSORw" id="TalendStringUtil" version="Latest" type="routine"/>
     </ItemsRelations>
     <migrationTask xmi:id="_JK_Q4JL-Eee-U8C8FcSORw" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_JK_Q4ZL-Eee-U8C8FcSORw" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>

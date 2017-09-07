@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_SpfDAJOrEee-U8C8FcSORw" defaultContext="dev" jobType="Big_Data_Batch" framework="Spark">
+  <context xmi:id="_SpfDAZOrEee-U8C8FcSORw" confirmationNeeded="false" name="test">
+    <contextParameter xmi:id="_SpfDApOrEee-U8C8FcSORw" comment="" name="vTmpVal" prompt="vTmpVal?" promptNeeded="false" type="id_String" value="20170530125139"/>
+    <contextParameter xmi:id="_SpfDA5OrEee-U8C8FcSORw" comment="" name="vHdfsRejectDir" prompt="vHdfsRejectDir?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDBJOrEee-U8C8FcSORw" comment="" name="vHdfsRawDir" prompt="vHdfsRawDir?" promptNeeded="false" type="id_String" value="/data/test/den/raw/polystar/"/>
+    <contextParameter xmi:id="_SpfDBZOrEee-U8C8FcSORw" comment="" name="vHdfsBaseDir" prompt="vHdfsBaseDir?" promptNeeded="false" type="id_String" value="/data/test/den/base/polystar/"/>
+    <contextParameter xmi:id="_SpfDBpOrEee-U8C8FcSORw" comment="" name="vLocationUpdateTmp" prompt="vLocationUpdateTmp?" promptNeeded="false" type="id_String" value="euroaming_outroamer_tmp"/>
+    <contextParameter xmi:id="_SpfDB5OrEee-U8C8FcSORw" comment="" name="vEuRoamerRetailTracking" prompt="vEuRoamerRetailTracking?" promptNeeded="false" type="id_String" value="euroaming_outroamers/retail_tracking/"/>
+    <contextParameter xmi:id="_SpfDCJOrEee-U8C8FcSORw" comment="" name="vNominalDay" prompt="vNominalDay?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDCZOrEee-U8C8FcSORw" comment="" name="vNominalHour" prompt="vNominalHour?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDCpOrEee-U8C8FcSORw" comment="" name="vNominalMin" prompt="vNominalMin?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDC5OrEee-U8C8FcSORw" comment="" name="vNominalMonth" prompt="vNominalMonth?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDDJOrEee-U8C8FcSORw" comment="" name="vNominalSecond" prompt="vNominalSecond?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDDZOrEee-U8C8FcSORw" comment="" name="vNominalTime" prompt="vNominalTime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDDpOrEee-U8C8FcSORw" comment="" name="vNominalYear" prompt="vNominalYear?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDD5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_client_failover_proxy_provider_nameservice_cdlpv2" prompt="cdl_cluster_dfs_client_failover_proxy_provider_nameservice_cdlpv2?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider"/>
+    <contextParameter xmi:id="_SpfDEJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_client_failover_proxy_provider_nameservice1" prompt="cdl_cluster_dfs_client_failover_proxy_provider_nameservice1?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider"/>
+    <contextParameter xmi:id="_SpfDEZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice_cdlpv2" prompt="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice_cdlpv2?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="true"/>
+    <contextParameter xmi:id="_SpfDEpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice1" prompt="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice1?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="true"/>
+    <contextParameter xmi:id="_SpfDE5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_namenodes_nameservice_cdlpv2" prompt="cdl_cluster_dfs_ha_namenodes_nameservice_cdlpv2?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="namenode186,namenode329"/>
+    <contextParameter xmi:id="_SpfDFJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_namenodes_nameservice1" prompt="cdl_cluster_dfs_ha_namenodes_nameservice1?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="namenode95,namenode187"/>
+    <contextParameter xmi:id="_SpfDFZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode186" prompt="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode186?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfDFpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode329" prompt="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode329?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfDF5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode187" prompt="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode187?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfDGJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode95" prompt="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode95?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfDGZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode186" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode186?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfDGpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode329" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode329?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfDG5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode187" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode187?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfDHJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode95" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode95?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfDHZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_nameservices" prompt="cdl_cluster_dfs_nameservices?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="nameservice1"/>
+    <contextParameter xmi:id="_SpfDHpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_JobHistory" prompt="cdl_cluster_JobHistory?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:10020"/>
+    <contextParameter xmi:id="_SpfDH5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_JobHistroyPrin" prompt="cdl_cluster_JobHistroyPrin?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="mapred/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDIJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_JTOrRMPrin" prompt="cdl_cluster_JTOrRMPrin?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="yarn/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDIZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_KeyTab" prompt="cdl_cluster_KeyTab?" promptNeeded="false" type="id_String" value="/home/testdenbatch01/testdenbatch01.keytab"/>
+    <contextParameter xmi:id="_SpfDIpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_NameNodePrin" prompt="cdl_cluster_NameNodePrin?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="hdfs/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDI5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_NameNodeUri" prompt="cdl_cluster_NameNodeUri?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="hdfs://nameservice1"/>
+    <contextParameter xmi:id="_SpfDJJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_Principal" prompt="cdl_cluster_Principal?" promptNeeded="false" type="id_String" value="testdenbatch01@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDJZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_ResourceManager" prompt="cdl_cluster_ResourceManager?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDJpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_ResourceManagerScheduler" prompt="cdl_cluster_ResourceManagerScheduler?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8030"/>
+    <contextParameter xmi:id="_SpfDJ5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_StagingDirectory" prompt="cdl_cluster_StagingDirectory?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="/user"/>
+    <contextParameter xmi:id="_SpfDKJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm172" prompt="cdl_cluster_yarn_resourcemanager_address_rm172?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDKZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm179" prompt="cdl_cluster_yarn_resourcemanager_address_rm179?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDKpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm310" prompt="cdl_cluster_yarn_resourcemanager_address_rm310?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDK5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm332" prompt="cdl_cluster_yarn_resourcemanager_address_rm332?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDLJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_cluster_id" prompt="cdl_cluster_yarn_resourcemanager_cluster_id?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="yarnRM"/>
+    <contextParameter xmi:id="_SpfDLZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_ha_enabled" prompt="cdl_cluster_yarn_resourcemanager_ha_enabled?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="true"/>
+    <contextParameter xmi:id="_SpfDLpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_ha_rm_ids" prompt="cdl_cluster_yarn_resourcemanager_ha_rm_ids?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="rm179,rm172"/>
+    <contextParameter xmi:id="_SpfDL5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Database" prompt="cdl_cluster_HIVE_Database?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="default"/>
+    <contextParameter xmi:id="_SpfDMJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_hiveAdditionalJDBCParameters" prompt="cdl_cluster_HIVE_hiveAdditionalJDBCParameters?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDMZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_HiveKeyTab" prompt="cdl_cluster_HIVE_HiveKeyTab?" promptNeeded="false" type="id_String" value="/home/testdenbatch01/testdenbatch01.keytab"/>
+    <contextParameter xmi:id="_SpfDMpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_HiveKeyTabPrincipal" prompt="cdl_cluster_HIVE_HiveKeyTabPrincipal?" promptNeeded="false" type="id_String" value="testdenbatch01@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDM5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_HivePrincipal" prompt="cdl_cluster_HIVE_HivePrincipal?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="hive/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDNJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Login" prompt="cdl_cluster_HIVE_Login?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDNZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Password" prompt="cdl_cluster_HIVE_Password?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_Password" value=""/>
+    <contextParameter xmi:id="_SpfDNpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Port" prompt="cdl_cluster_HIVE_Port?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="10000"/>
+    <contextParameter xmi:id="_SpfDN5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Server" prompt="cdl_cluster_HIVE_Server?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net"/>
+    <contextParameter xmi:id="_SpfDOJOrEee-U8C8FcSORw" comment="" name="v_Env" prompt="v_Env?" promptNeeded="false" repositoryContextId="_u36XoOIiEeaklLKnYh-FIA" type="id_String" value="test"/>
+    <contextParameter xmi:id="_SpfDOZOrEee-U8C8FcSORw" comment="" name="v_Host" prompt="v_Host?" promptNeeded="false" repositoryContextId="_u36XoOIiEeaklLKnYh-FIA" type="id_String" value="datalake009.ddc.teliasonera.com"/>
+    <contextParameter xmi:id="_SpfDOpOrEee-U8C8FcSORw" comment="" name="vPort" prompt="vPort?" promptNeeded="false" repositoryContextId="_u36XoOIiEeaklLKnYh-FIA" type="id_String" value="8059"/>
+    <contextParameter xmi:id="_SpfDO5OrEee-U8C8FcSORw" comment="" name="vQueueName" prompt="vQueueName?" promptNeeded="false" type="id_String" value="den.ingest"/>
+    <contextParameter xmi:id="_SpfDPJOrEee-U8C8FcSORw" comment="" name="vSchedulerMode" prompt="vSchedulerMode?" promptNeeded="false" type="id_String" value="FAIR"/>
+    <contextParameter xmi:id="_SpfDPZOrEee-U8C8FcSORw" comment="" name="vOutroamer_TmpStream" prompt="vOutroamer_TmpStream?" promptNeeded="false" type="id_String" value="euroaming_outroamer_tmp"/>
+    <contextParameter xmi:id="_SpfDPpOrEee-U8C8FcSORw" comment="" name="vHdfsRawTmpDir" prompt="vHdfsRawTmpDir?" promptNeeded="false" type="id_String" value="/data/test/den/raw/polystar/tmp/"/>
+  </context>
+  <context xmi:id="_SpfDP5OrEee-U8C8FcSORw" confirmationNeeded="false" name="prod">
+    <contextParameter xmi:id="_SpfDQJOrEee-U8C8FcSORw" comment="" name="vTmpVal" prompt="vTmpVal?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDQZOrEee-U8C8FcSORw" comment="" name="vHdfsRejectDir" prompt="vHdfsRejectDir?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDQpOrEee-U8C8FcSORw" comment="" name="vHdfsRawDir" prompt="vHdfsRawDir?" promptNeeded="false" type="id_String" value="/data/prod2/den/raw/polystar/"/>
+    <contextParameter xmi:id="_SpfDQ5OrEee-U8C8FcSORw" comment="" name="vHdfsBaseDir" prompt="vHdfsBaseDir?" promptNeeded="false" type="id_String" value="/data/prod2/den/base/polystar/"/>
+    <contextParameter xmi:id="_SpfDRJOrEee-U8C8FcSORw" comment="" name="vLocationUpdateTmp" prompt="vLocationUpdateTmp?" promptNeeded="false" type="id_String" value="euroaming_outroamer_tmp"/>
+    <contextParameter xmi:id="_SpfDRZOrEee-U8C8FcSORw" comment="" name="vEuRoamerRetailTracking" prompt="vEuRoamerRetailTracking?" promptNeeded="false" type="id_String" value="euroaming_outroamers/retail_tracking/"/>
+    <contextParameter xmi:id="_SpfDRpOrEee-U8C8FcSORw" comment="" name="vNominalDay" prompt="vNominalDay?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDR5OrEee-U8C8FcSORw" comment="" name="vNominalHour" prompt="vNominalHour?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDSJOrEee-U8C8FcSORw" comment="" name="vNominalMin" prompt="vNominalMin?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDSZOrEee-U8C8FcSORw" comment="" name="vNominalMonth" prompt="vNominalMonth?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDSpOrEee-U8C8FcSORw" comment="" name="vNominalSecond" prompt="vNominalSecond?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDS5OrEee-U8C8FcSORw" comment="" name="vNominalTime" prompt="vNominalTime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDTJOrEee-U8C8FcSORw" comment="" name="vNominalYear" prompt="vNominalYear?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDTZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_client_failover_proxy_provider_nameservice_cdlpv2" prompt="cdl_cluster_dfs_client_failover_proxy_provider_nameservice_cdlpv2?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider"/>
+    <contextParameter xmi:id="_SpfDTpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_client_failover_proxy_provider_nameservice1" prompt="cdl_cluster_dfs_client_failover_proxy_provider_nameservice1?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider"/>
+    <contextParameter xmi:id="_SpfDT5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice_cdlpv2" prompt="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice_cdlpv2?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="true"/>
+    <contextParameter xmi:id="_SpfDUJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice1" prompt="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice1?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="true"/>
+    <contextParameter xmi:id="_SpfDUZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_namenodes_nameservice_cdlpv2" prompt="cdl_cluster_dfs_ha_namenodes_nameservice_cdlpv2?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="namenode186,namenode329"/>
+    <contextParameter xmi:id="_SpfDUpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_namenodes_nameservice1" prompt="cdl_cluster_dfs_ha_namenodes_nameservice1?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="namenode95,namenode187"/>
+    <contextParameter xmi:id="_SpfDU5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode186" prompt="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode186?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfDVJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode329" prompt="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode329?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfDVZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode187" prompt="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode187?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfDVpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode95" prompt="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode95?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfDV5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode186" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode186?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfDWJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode329" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode329?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfDWZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode187" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode187?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfDWpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode95" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode95?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfDW5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_nameservices" prompt="cdl_cluster_dfs_nameservices?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="nameservice-cdlpv2"/>
+    <contextParameter xmi:id="_SpfDXJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_JobHistory" prompt="cdl_cluster_JobHistory?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:10020"/>
+    <contextParameter xmi:id="_SpfDXZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_JobHistroyPrin" prompt="cdl_cluster_JobHistroyPrin?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="mapred/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDXpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_JTOrRMPrin" prompt="cdl_cluster_JTOrRMPrin?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="yarn/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDX5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_KeyTab" prompt="cdl_cluster_KeyTab?" promptNeeded="false" type="id_String" value="/home/proddenbatch01/proddenbatch01.keytab"/>
+    <contextParameter xmi:id="_SpfDYJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_NameNodePrin" prompt="cdl_cluster_NameNodePrin?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="hdfs/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDYZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_NameNodeUri" prompt="cdl_cluster_NameNodeUri?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="hdfs://nameservice-cdlpv2"/>
+    <contextParameter xmi:id="_SpfDYpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_Principal" prompt="cdl_cluster_Principal?" promptNeeded="false" type="id_String" value="proddenbatch01@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDY5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_ResourceManager" prompt="cdl_cluster_ResourceManager?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDZJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_ResourceManagerScheduler" prompt="cdl_cluster_ResourceManagerScheduler?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:8030"/>
+    <contextParameter xmi:id="_SpfDZZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_StagingDirectory" prompt="cdl_cluster_StagingDirectory?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="/user"/>
+    <contextParameter xmi:id="_SpfDZpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm172" prompt="cdl_cluster_yarn_resourcemanager_address_rm172?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDZ5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm179" prompt="cdl_cluster_yarn_resourcemanager_address_rm179?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDaJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm310" prompt="cdl_cluster_yarn_resourcemanager_address_rm310?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDaZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm332" prompt="cdl_cluster_yarn_resourcemanager_address_rm332?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDapOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_cluster_id" prompt="cdl_cluster_yarn_resourcemanager_cluster_id?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="yarnRM"/>
+    <contextParameter xmi:id="_SpfDa5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_ha_enabled" prompt="cdl_cluster_yarn_resourcemanager_ha_enabled?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="true"/>
+    <contextParameter xmi:id="_SpfDbJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_ha_rm_ids" prompt="cdl_cluster_yarn_resourcemanager_ha_rm_ids?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="rm332,rm310"/>
+    <contextParameter xmi:id="_SpfDbZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Database" prompt="cdl_cluster_HIVE_Database?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="default"/>
+    <contextParameter xmi:id="_SpfDbpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_hiveAdditionalJDBCParameters" prompt="cdl_cluster_HIVE_hiveAdditionalJDBCParameters?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDb5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_HiveKeyTab" prompt="cdl_cluster_HIVE_HiveKeyTab?" promptNeeded="false" type="id_String" value="/home/proddenbatch01/proddenbatch01.keytab"/>
+    <contextParameter xmi:id="_SpfDcJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_HiveKeyTabPrincipal" prompt="cdl_cluster_HIVE_HiveKeyTabPrincipal?" promptNeeded="false" type="id_String" value="proddenbatch01@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDcZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_HivePrincipal" prompt="cdl_cluster_HIVE_HivePrincipal?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="hive/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDcpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Login" prompt="cdl_cluster_HIVE_Login?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDc5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Password" prompt="cdl_cluster_HIVE_Password?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_Password" value=""/>
+    <contextParameter xmi:id="_SpfDdJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Port" prompt="cdl_cluster_HIVE_Port?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="10000"/>
+    <contextParameter xmi:id="_SpfDdZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Server" prompt="cdl_cluster_HIVE_Server?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="dl200nn09-hdfs.ddc.teliasonera.net"/>
+    <contextParameter xmi:id="_SpfDdpOrEee-U8C8FcSORw" comment="" name="v_Env" prompt="v_Env?" promptNeeded="false" repositoryContextId="_u36XoOIiEeaklLKnYh-FIA" type="id_String" value="prod"/>
+    <contextParameter xmi:id="_SpfDd5OrEee-U8C8FcSORw" comment="" name="v_Host" prompt="v_Host?" promptNeeded="false" repositoryContextId="_u36XoOIiEeaklLKnYh-FIA" type="id_String" value="datalake009.ddc.teliasonera.com"/>
+    <contextParameter xmi:id="_SpfDeJOrEee-U8C8FcSORw" comment="" name="vPort" prompt="vPort?" promptNeeded="false" repositoryContextId="_u36XoOIiEeaklLKnYh-FIA" type="id_String" value="8059"/>
+    <contextParameter xmi:id="_SpfDeZOrEee-U8C8FcSORw" comment="" name="vQueueName" prompt="vQueueName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDepOrEee-U8C8FcSORw" comment="" name="vSchedulerMode" prompt="vSchedulerMode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDe5OrEee-U8C8FcSORw" comment="" name="vOutroamer_TmpStream" prompt="vOutroamer_TmpStream?" promptNeeded="false" type="id_String" value="euroaming_outroamer_tmp"/>
+    <contextParameter xmi:id="_SpfDfJOrEee-U8C8FcSORw" comment="" name="vHdfsRawTmpDir" prompt="vHdfsRawTmpDir?" promptNeeded="false" type="id_String" value="/data/prod2/den/raw/polystar/tmp/"/>
+  </context>
+  <context xmi:id="_SpfDfZOrEee-U8C8FcSORw" confirmationNeeded="false" name="dev">
+    <contextParameter xmi:id="_SpfDfpOrEee-U8C8FcSORw" comment="" name="vTmpVal" prompt="vTmpVal?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDf5OrEee-U8C8FcSORw" comment="" name="vHdfsRejectDir" prompt="vHdfsRejectDir?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDgJOrEee-U8C8FcSORw" comment="" name="vHdfsRawDir" prompt="vHdfsRawDir?" promptNeeded="false" type="id_String" value="/data/dev/den/raw/polystar/"/>
+    <contextParameter xmi:id="_SpfDgZOrEee-U8C8FcSORw" comment="" name="vHdfsBaseDir" prompt="vHdfsBaseDir?" promptNeeded="false" type="id_String" value="/data/dev/den/base/polystar/"/>
+    <contextParameter xmi:id="_SpfDgpOrEee-U8C8FcSORw" comment="" name="vLocationUpdateTmp" prompt="vLocationUpdateTmp?" promptNeeded="false" type="id_String" value="euroaming_outroamer_tmp"/>
+    <contextParameter xmi:id="_SpfDg5OrEee-U8C8FcSORw" comment="" name="vEuRoamerRetailTracking" prompt="vEuRoamerRetailTracking?" promptNeeded="false" type="id_String" value="euroaming_outroamers/retail_tracking/"/>
+    <contextParameter xmi:id="_SpfDhJOrEee-U8C8FcSORw" comment="" name="vNominalDay" prompt="vNominalDay?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDhZOrEee-U8C8FcSORw" comment="" name="vNominalHour" prompt="vNominalHour?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDhpOrEee-U8C8FcSORw" comment="" name="vNominalMin" prompt="vNominalMin?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDh5OrEee-U8C8FcSORw" comment="" name="vNominalMonth" prompt="vNominalMonth?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDiJOrEee-U8C8FcSORw" comment="" name="vNominalSecond" prompt="vNominalSecond?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDiZOrEee-U8C8FcSORw" comment="" name="vNominalTime" prompt="vNominalTime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDipOrEee-U8C8FcSORw" comment="" name="vNominalYear" prompt="vNominalYear?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDi5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_client_failover_proxy_provider_nameservice_cdlpv2" prompt="cdl_cluster_dfs_client_failover_proxy_provider_nameservice_cdlpv2?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider"/>
+    <contextParameter xmi:id="_SpfDjJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_client_failover_proxy_provider_nameservice1" prompt="cdl_cluster_dfs_client_failover_proxy_provider_nameservice1?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider"/>
+    <contextParameter xmi:id="_SpfDjZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice_cdlpv2" prompt="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice_cdlpv2?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="true"/>
+    <contextParameter xmi:id="_SpfDjpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice1" prompt="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice1?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="true"/>
+    <contextParameter xmi:id="_SpfDj5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_namenodes_nameservice_cdlpv2" prompt="cdl_cluster_dfs_ha_namenodes_nameservice_cdlpv2?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="namenode186,namenode329"/>
+    <contextParameter xmi:id="_SpfDkJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_namenodes_nameservice1" prompt="cdl_cluster_dfs_ha_namenodes_nameservice1?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="namenode95,namenode187"/>
+    <contextParameter xmi:id="_SpfDkZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode186" prompt="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode186?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfDkpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode329" prompt="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode329?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfDk5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode187" prompt="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode187?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfDlJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode95" prompt="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode95?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfDlZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode186" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode186?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfDlpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode329" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode329?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfDl5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode187" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode187?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfDmJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode95" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode95?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfDmZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_nameservices" prompt="cdl_cluster_dfs_nameservices?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="nameservice1"/>
+    <contextParameter xmi:id="_SpfDmpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_JobHistory" prompt="cdl_cluster_JobHistory?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:10020"/>
+    <contextParameter xmi:id="_SpfDm5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_JobHistroyPrin" prompt="cdl_cluster_JobHistroyPrin?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="mapred/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDnJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_JTOrRMPrin" prompt="cdl_cluster_JTOrRMPrin?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="yarn/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDnZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_KeyTab" prompt="cdl_cluster_KeyTab?" promptNeeded="false" type="id_String" value="/home/testdenbatch01/testdenbatch01.keytab"/>
+    <contextParameter xmi:id="_SpfDnpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_NameNodePrin" prompt="cdl_cluster_NameNodePrin?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="hdfs/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDn5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_NameNodeUri" prompt="cdl_cluster_NameNodeUri?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="hdfs://nameservice1"/>
+    <contextParameter xmi:id="_SpfDoJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_Principal" prompt="cdl_cluster_Principal?" promptNeeded="false" type="id_String" value="testdenbatch01@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDoZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_ResourceManager" prompt="cdl_cluster_ResourceManager?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDopOrEee-U8C8FcSORw" comment="" name="cdl_cluster_ResourceManagerScheduler" prompt="cdl_cluster_ResourceManagerScheduler?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8030"/>
+    <contextParameter xmi:id="_SpfDo5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_StagingDirectory" prompt="cdl_cluster_StagingDirectory?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="/user"/>
+    <contextParameter xmi:id="_SpfDpJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm172" prompt="cdl_cluster_yarn_resourcemanager_address_rm172?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDpZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm179" prompt="cdl_cluster_yarn_resourcemanager_address_rm179?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDppOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm310" prompt="cdl_cluster_yarn_resourcemanager_address_rm310?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDp5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm332" prompt="cdl_cluster_yarn_resourcemanager_address_rm332?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfDqJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_cluster_id" prompt="cdl_cluster_yarn_resourcemanager_cluster_id?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="yarnRM"/>
+    <contextParameter xmi:id="_SpfDqZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_ha_enabled" prompt="cdl_cluster_yarn_resourcemanager_ha_enabled?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="true"/>
+    <contextParameter xmi:id="_SpfDqpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_ha_rm_ids" prompt="cdl_cluster_yarn_resourcemanager_ha_rm_ids?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="rm179,rm172"/>
+    <contextParameter xmi:id="_SpfDq5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Database" prompt="cdl_cluster_HIVE_Database?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="default"/>
+    <contextParameter xmi:id="_SpfDrJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_hiveAdditionalJDBCParameters" prompt="cdl_cluster_HIVE_hiveAdditionalJDBCParameters?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDrZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_HiveKeyTab" prompt="cdl_cluster_HIVE_HiveKeyTab?" promptNeeded="false" type="id_String" value="/home/testdenbatch01/testdenbatch01.keytab"/>
+    <contextParameter xmi:id="_SpfDrpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_HiveKeyTabPrincipal" prompt="cdl_cluster_HIVE_HiveKeyTabPrincipal?" promptNeeded="false" type="id_String" value="testdenbatch01@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDr5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_HivePrincipal" prompt="cdl_cluster_HIVE_HivePrincipal?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="hive/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfDsJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Login" prompt="cdl_cluster_HIVE_Login?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDsZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Password" prompt="cdl_cluster_HIVE_Password?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_Password" value=""/>
+    <contextParameter xmi:id="_SpfDspOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Port" prompt="cdl_cluster_HIVE_Port?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="10000"/>
+    <contextParameter xmi:id="_SpfDs5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Server" prompt="cdl_cluster_HIVE_Server?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net"/>
+    <contextParameter xmi:id="_SpfDtJOrEee-U8C8FcSORw" comment="" name="v_Env" prompt="v_Env?" promptNeeded="false" repositoryContextId="_u36XoOIiEeaklLKnYh-FIA" type="id_String" value="dev"/>
+    <contextParameter xmi:id="_SpfDtZOrEee-U8C8FcSORw" comment="" name="v_Host" prompt="v_Host?" promptNeeded="false" repositoryContextId="_u36XoOIiEeaklLKnYh-FIA" type="id_String" value="datalake009.ddc.teliasonera.com"/>
+    <contextParameter xmi:id="_SpfDtpOrEee-U8C8FcSORw" comment="" name="vPort" prompt="vPort?" promptNeeded="false" repositoryContextId="_u36XoOIiEeaklLKnYh-FIA" type="id_String" value="8059"/>
+    <contextParameter xmi:id="_SpfDt5OrEee-U8C8FcSORw" comment="" name="vQueueName" prompt="vQueueName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDuJOrEee-U8C8FcSORw" comment="" name="vSchedulerMode" prompt="vSchedulerMode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDuZOrEee-U8C8FcSORw" comment="" name="vOutroamer_TmpStream" prompt="vOutroamer_TmpStream?" promptNeeded="false" type="id_String" value="euroaming_outroamer_tmp"/>
+    <contextParameter xmi:id="_SpfDupOrEee-U8C8FcSORw" comment="" name="vHdfsRawTmpDir" prompt="vHdfsRawTmpDir?" promptNeeded="false" type="id_String" value="/data/dev/den/raw/polystar/tmp/"/>
+  </context>
+  <context xmi:id="_SpfDu5OrEee-U8C8FcSORw" confirmationNeeded="false" name="preprod">
+    <contextParameter xmi:id="_SpfDvJOrEee-U8C8FcSORw" comment="" name="vTmpVal" prompt="vTmpVal?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDvZOrEee-U8C8FcSORw" comment="" name="vHdfsRejectDir" prompt="vHdfsRejectDir?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDvpOrEee-U8C8FcSORw" comment="" name="vHdfsRawDir" prompt="vHdfsRawDir?" promptNeeded="false" type="id_String" value="/data/preprod/den/raw/polystar/"/>
+    <contextParameter xmi:id="_SpfDv5OrEee-U8C8FcSORw" comment="" name="vHdfsBaseDir" prompt="vHdfsBaseDir?" promptNeeded="false" type="id_String" value="/data/preprod/den/base/polystar/"/>
+    <contextParameter xmi:id="_SpfDwJOrEee-U8C8FcSORw" comment="" name="vLocationUpdateTmp" prompt="vLocationUpdateTmp?" promptNeeded="false" type="id_String" value="euroaming_outroamer_tmp"/>
+    <contextParameter xmi:id="_SpfDwZOrEee-U8C8FcSORw" comment="" name="vEuRoamerRetailTracking" prompt="vEuRoamerRetailTracking?" promptNeeded="false" type="id_String" value="euroaming_outroamers/retail_tracking/"/>
+    <contextParameter xmi:id="_SpfDwpOrEee-U8C8FcSORw" comment="" name="vNominalDay" prompt="vNominalDay?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDw5OrEee-U8C8FcSORw" comment="" name="vNominalHour" prompt="vNominalHour?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDxJOrEee-U8C8FcSORw" comment="" name="vNominalMin" prompt="vNominalMin?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDxZOrEee-U8C8FcSORw" comment="" name="vNominalMonth" prompt="vNominalMonth?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDxpOrEee-U8C8FcSORw" comment="" name="vNominalSecond" prompt="vNominalSecond?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDx5OrEee-U8C8FcSORw" comment="" name="vNominalTime" prompt="vNominalTime?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDyJOrEee-U8C8FcSORw" comment="" name="vNominalYear" prompt="vNominalYear?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfDyZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_client_failover_proxy_provider_nameservice_cdlpv2" prompt="cdl_cluster_dfs_client_failover_proxy_provider_nameservice_cdlpv2?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider"/>
+    <contextParameter xmi:id="_SpfDypOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_client_failover_proxy_provider_nameservice1" prompt="cdl_cluster_dfs_client_failover_proxy_provider_nameservice1?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider"/>
+    <contextParameter xmi:id="_SpfDy5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice_cdlpv2" prompt="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice_cdlpv2?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="true"/>
+    <contextParameter xmi:id="_SpfDzJOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice1" prompt="cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice1?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="true"/>
+    <contextParameter xmi:id="_SpfDzZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_namenodes_nameservice_cdlpv2" prompt="cdl_cluster_dfs_ha_namenodes_nameservice_cdlpv2?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="namenode186,namenode329"/>
+    <contextParameter xmi:id="_SpfDzpOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_ha_namenodes_nameservice1" prompt="cdl_cluster_dfs_ha_namenodes_nameservice1?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="namenode95,namenode187"/>
+    <contextParameter xmi:id="_SpfDz5OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode186" prompt="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode186?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfD0JOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode329" prompt="cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode329?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfD0ZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode187" prompt="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode187?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfD0pOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode95" prompt="cdl_cluster_dfs_namenode_http_address_nameservice1_namenode95?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:50070"/>
+    <contextParameter xmi:id="_SpfD05OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode186" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode186?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfD1JOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode329" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode329?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfD1ZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode187" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode187?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfD1pOrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode95" prompt="cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode95?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8020"/>
+    <contextParameter xmi:id="_SpfD15OrEee-U8C8FcSORw" comment="" name="cdl_cluster_dfs_nameservices" prompt="cdl_cluster_dfs_nameservices?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="nameservice1"/>
+    <contextParameter xmi:id="_SpfD2JOrEee-U8C8FcSORw" comment="" name="cdl_cluster_JobHistory" prompt="cdl_cluster_JobHistory?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:10020"/>
+    <contextParameter xmi:id="_SpfD2ZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_JobHistroyPrin" prompt="cdl_cluster_JobHistroyPrin?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="mapred/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfD2pOrEee-U8C8FcSORw" comment="" name="cdl_cluster_JTOrRMPrin" prompt="cdl_cluster_JTOrRMPrin?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="yarn/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfD25OrEee-U8C8FcSORw" comment="" name="cdl_cluster_KeyTab" prompt="cdl_cluster_KeyTab?" promptNeeded="false" type="id_String" value="/home/preproddenbatch01/preproddenbatch01.keytab"/>
+    <contextParameter xmi:id="_SpfD3JOrEee-U8C8FcSORw" comment="" name="cdl_cluster_NameNodePrin" prompt="cdl_cluster_NameNodePrin?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="hdfs/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfD3ZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_NameNodeUri" prompt="cdl_cluster_NameNodeUri?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="hdfs://nameservice1"/>
+    <contextParameter xmi:id="_SpfD3pOrEee-U8C8FcSORw" comment="" name="cdl_cluster_Principal" prompt="cdl_cluster_Principal?" promptNeeded="false" type="id_String" value="preproddenbatch01@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfD35OrEee-U8C8FcSORw" comment="" name="cdl_cluster_ResourceManager" prompt="cdl_cluster_ResourceManager?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfD4JOrEee-U8C8FcSORw" comment="" name="cdl_cluster_ResourceManagerScheduler" prompt="cdl_cluster_ResourceManagerScheduler?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8030"/>
+    <contextParameter xmi:id="_SpfD4ZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_StagingDirectory" prompt="cdl_cluster_StagingDirectory?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="/user"/>
+    <contextParameter xmi:id="_SpfD4pOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm172" prompt="cdl_cluster_yarn_resourcemanager_address_rm172?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfD45OrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm179" prompt="cdl_cluster_yarn_resourcemanager_address_rm179?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl100nn01-hdfs.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfD5JOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm310" prompt="cdl_cluster_yarn_resourcemanager_address_rm310?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn06.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfD5ZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_address_rm332" prompt="cdl_cluster_yarn_resourcemanager_address_rm332?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="dl200nn05.ddc.teliasonera.net:8032"/>
+    <contextParameter xmi:id="_SpfD5pOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_cluster_id" prompt="cdl_cluster_yarn_resourcemanager_cluster_id?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="yarnRM"/>
+    <contextParameter xmi:id="_SpfD55OrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_ha_enabled" prompt="cdl_cluster_yarn_resourcemanager_ha_enabled?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="true"/>
+    <contextParameter xmi:id="_SpfD6JOrEee-U8C8FcSORw" comment="" name="cdl_cluster_yarn_resourcemanager_ha_rm_ids" prompt="cdl_cluster_yarn_resourcemanager_ha_rm_ids?" promptNeeded="false" repositoryContextId="_GkaGAEoJEeePFLrB05YKNg" type="id_String" value="rm179,rm172"/>
+    <contextParameter xmi:id="_SpfD6ZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Database" prompt="cdl_cluster_HIVE_Database?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="default"/>
+    <contextParameter xmi:id="_SpfD6pOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_hiveAdditionalJDBCParameters" prompt="cdl_cluster_HIVE_hiveAdditionalJDBCParameters?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfD65OrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_HiveKeyTab" prompt="cdl_cluster_HIVE_HiveKeyTab?" promptNeeded="false" type="id_String" value="/home/preproddenbatch01/preproddenbatch01.keytab"/>
+    <contextParameter xmi:id="_SpfD7JOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_HiveKeyTabPrincipal" prompt="cdl_cluster_HIVE_HiveKeyTabPrincipal?" promptNeeded="false" type="id_String" value="preproddenbatch01@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfD7ZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_HivePrincipal" prompt="cdl_cluster_HIVE_HivePrincipal?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="hive/_HOST@TCAD.TELIA.SE"/>
+    <contextParameter xmi:id="_SpfD7pOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Login" prompt="cdl_cluster_HIVE_Login?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfD75OrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Password" prompt="cdl_cluster_HIVE_Password?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_Password" value=""/>
+    <contextParameter xmi:id="_SpfD8JOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Port" prompt="cdl_cluster_HIVE_Port?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="10000"/>
+    <contextParameter xmi:id="_SpfD8ZOrEee-U8C8FcSORw" comment="" name="cdl_cluster_HIVE_Server" prompt="cdl_cluster_HIVE_Server?" promptNeeded="false" repositoryContextId="_BdIykEn7EeePFLrB05YKNg" type="id_String" value="dl100nn02-hdfs.ddc.teliasonera.net"/>
+    <contextParameter xmi:id="_SpfD8pOrEee-U8C8FcSORw" comment="" name="v_Env" prompt="v_Env?" promptNeeded="false" repositoryContextId="_u36XoOIiEeaklLKnYh-FIA" type="id_String" value="dev"/>
+    <contextParameter xmi:id="_SpfD85OrEee-U8C8FcSORw" comment="" name="v_Host" prompt="v_Host?" promptNeeded="false" repositoryContextId="_u36XoOIiEeaklLKnYh-FIA" type="id_String" value="datalake009.ddc.teliasonera.com"/>
+    <contextParameter xmi:id="_SpfD9JOrEee-U8C8FcSORw" comment="" name="vPort" prompt="vPort?" promptNeeded="false" repositoryContextId="_u36XoOIiEeaklLKnYh-FIA" type="id_String" value="8059"/>
+    <contextParameter xmi:id="_SpfD9ZOrEee-U8C8FcSORw" comment="" name="vQueueName" prompt="vQueueName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfD9pOrEee-U8C8FcSORw" comment="" name="vSchedulerMode" prompt="vSchedulerMode?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfD95OrEee-U8C8FcSORw" comment="" name="vOutroamer_TmpStream" prompt="vOutroamer_TmpStream?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_SpfD-JOrEee-U8C8FcSORw" comment="" name="vHdfsRawTmpDir" prompt="vHdfsRawTmpDir?" promptNeeded="false" type="id_String" value=""/>
+  </context>
+  <parameters xmi:id="_SpfD-ZOrEee-U8C8FcSORw">
+    <elementParameter xmi:id="_SpfD-pOrEee-U8C8FcSORw" field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter xmi:id="_SpfD-5OrEee-U8C8FcSORw" field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter xmi:id="_SpfD_JOrEee-U8C8FcSORw" field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter xmi:id="_SpfD_ZOrEee-U8C8FcSORw" field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter xmi:id="_SpfD_pOrEee-U8C8FcSORw" field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter xmi:id="_SpfD_5OrEee-U8C8FcSORw" field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEAJOrEee-U8C8FcSORw" field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEAZOrEee-U8C8FcSORw" field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEApOrEee-U8C8FcSORw" field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEA5OrEee-U8C8FcSORw" field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEBJOrEee-U8C8FcSORw" field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEBZOrEee-U8C8FcSORw" field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEBpOrEee-U8C8FcSORw" field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEB5OrEee-U8C8FcSORw" field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter xmi:id="_SpfECJOrEee-U8C8FcSORw" field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter xmi:id="_SpfECZOrEee-U8C8FcSORw" field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter xmi:id="_SpfECpOrEee-U8C8FcSORw" field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEC5OrEee-U8C8FcSORw" field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter xmi:id="_SpfEDJOrEee-U8C8FcSORw" field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter xmi:id="_SpfEDZOrEee-U8C8FcSORw" field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter xmi:id="_SpfEDpOrEee-U8C8FcSORw" field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter xmi:id="_SpfED5OrEee-U8C8FcSORw" field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter xmi:id="_SpfEEJOrEee-U8C8FcSORw" field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfEEZOrEee-U8C8FcSORw" field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfEEpOrEee-U8C8FcSORw" field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEE5OrEee-U8C8FcSORw" field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEFJOrEee-U8C8FcSORw" field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEFZOrEee-U8C8FcSORw" field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEFpOrEee-U8C8FcSORw" field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEF5OrEee-U8C8FcSORw" field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEGJOrEee-U8C8FcSORw" field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEGZOrEee-U8C8FcSORw" field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter xmi:id="_SpfEGpOrEee-U8C8FcSORw" field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEG5OrEee-U8C8FcSORw" field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEHJOrEee-U8C8FcSORw" field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEHZOrEee-U8C8FcSORw" field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEHpOrEee-U8C8FcSORw" field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEH5OrEee-U8C8FcSORw" field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEIJOrEee-U8C8FcSORw" field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEIZOrEee-U8C8FcSORw" field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEIpOrEee-U8C8FcSORw" field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="EmekHM+r0swh+R92AteNsCgNibbYUhmE+t92mu1Zfdo=" show="false"/>
+    <elementParameter xmi:id="_SpfEI5OrEee-U8C8FcSORw" field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEJJOrEee-U8C8FcSORw" field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEJZOrEee-U8C8FcSORw" field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEJpOrEee-U8C8FcSORw" field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter xmi:id="_SpfEJ5OrEee-U8C8FcSORw" field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter xmi:id="_SpfEKJOrEee-U8C8FcSORw" field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfEKZOrEee-U8C8FcSORw" field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfEKpOrEee-U8C8FcSORw" field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfEK5OrEee-U8C8FcSORw" field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfELJOrEee-U8C8FcSORw" field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter xmi:id="_SpfELZOrEee-U8C8FcSORw" field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter xmi:id="_SpfELpOrEee-U8C8FcSORw" field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter xmi:id="_SpfEL5OrEee-U8C8FcSORw" field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfEMJOrEee-U8C8FcSORw" field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfEMZOrEee-U8C8FcSORw" field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Users/scg883/workspace/.metadata&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEMpOrEee-U8C8FcSORw" field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEM5OrEee-U8C8FcSORw" field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfENJOrEee-U8C8FcSORw" field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfENZOrEee-U8C8FcSORw" field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter xmi:id="_SpfENpOrEee-U8C8FcSORw" field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter xmi:id="_SpfEN5OrEee-U8C8FcSORw" field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfEOJOrEee-U8C8FcSORw" field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter xmi:id="_SpfEOZOrEee-U8C8FcSORw" field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11" show="false"/>
+    <elementParameter xmi:id="_SpfEOpOrEee-U8C8FcSORw" field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEO5OrEee-U8C8FcSORw" field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter xmi:id="_SpfEPJOrEee-U8C8FcSORw" field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEPZOrEee-U8C8FcSORw" field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEPpOrEee-U8C8FcSORw" field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEP5OrEee-U8C8FcSORw" field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEQJOrEee-U8C8FcSORw" field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEQZOrEee-U8C8FcSORw" field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEQpOrEee-U8C8FcSORw" field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEQ5OrEee-U8C8FcSORw" field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfERJOrEee-U8C8FcSORw" field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfERZOrEee-U8C8FcSORw" field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_SpfERpOrEee-U8C8FcSORw" field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfER5OrEee-U8C8FcSORw" field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfESJOrEee-U8C8FcSORw" field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfESZOrEee-U8C8FcSORw" field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfESpOrEee-U8C8FcSORw" field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter xmi:id="_SpfES5OrEee-U8C8FcSORw" field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter xmi:id="_SpfETJOrEee-U8C8FcSORw" field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter xmi:id="_SpfETZOrEee-U8C8FcSORw" field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfETpOrEee-U8C8FcSORw" field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter xmi:id="_SpfET5OrEee-U8C8FcSORw" field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfEUJOrEee-U8C8FcSORw" field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEUZOrEee-U8C8FcSORw" field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEUpOrEee-U8C8FcSORw" field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEU5OrEee-U8C8FcSORw" field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEVJOrEee-U8C8FcSORw" field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfEVZOrEee-U8C8FcSORw" field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEVpOrEee-U8C8FcSORw" field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEV5OrEee-U8C8FcSORw" field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEWJOrEee-U8C8FcSORw" field="CHECK" name="SPARK_LOCAL_MODE" value="false"/>
+    <elementParameter xmi:id="_SpfEWZOrEee-U8C8FcSORw" field="CLOSED_LIST" name="SPARK_LOCAL_VERSION" value="SPARK_2_0_0" show="false"/>
+    <elementParameter xmi:id="_SpfEWpOrEee-U8C8FcSORw" field="TECHNICAL" name="MR_PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter xmi:id="_SpfEW5OrEee-U8C8FcSORw" field="TECHNICAL" name="MR_PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_IK6HkEn6EeePFLrB05YKNg" show="false"/>
+    <elementParameter xmi:id="_SpfEXJOrEee-U8C8FcSORw" field="CLOSED_LIST" name="DISTRIBUTION" value="CLOUDERA"/>
+    <elementParameter xmi:id="_SpfEXZOrEee-U8C8FcSORw" field="CLOSED_LIST" name="SPARK_VERSION" value="Cloudera_CDH5_8"/>
+    <elementParameter xmi:id="_SpfEXpOrEee-U8C8FcSORw" field="HADOOP_DISTRIBUTION" name="SPARKBATCH" value=""/>
+    <elementParameter xmi:id="_SpfEX5OrEee-U8C8FcSORw" field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" value="" show="false"/>
+    <elementParameter xmi:id="_SpfEYJOrEee-U8C8FcSORw" field="LABEL" name="NOTE" value="** The version of Spark must be 1.3.0 or later." show="false"/>
+    <elementParameter xmi:id="_SpfEYZOrEee-U8C8FcSORw" field="CLOSED_LIST" name="SPARK_API_VERSION" value="SPARK_200" show="false"/>
+    <elementParameter xmi:id="_SpfEYpOrEee-U8C8FcSORw" field="CLOSED_LIST" name="SPARK_MODE" value="YARN_CLIENT"/>
+    <elementParameter xmi:id="_SpfEY5OrEee-U8C8FcSORw" field="TEXT" name="RESOURCE_MANAGER" value="context.cdl_cluster_ResourceManager"/>
+    <elementParameter xmi:id="_SpfEZJOrEee-U8C8FcSORw" field="CHECK" name="SET_SCHEDULER_ADDRESS" value="true"/>
+    <elementParameter xmi:id="_SpfEZZOrEee-U8C8FcSORw" field="TEXT" name="RESOURCEMANAGER_SCHEDULER_ADDRESS" value="context.cdl_cluster_ResourceManagerScheduler"/>
+    <elementParameter xmi:id="_SpfEZpOrEee-U8C8FcSORw" field="CHECK" name="SET_JOBHISTORY_ADDRESS" value="true"/>
+    <elementParameter xmi:id="_SpfEZ5OrEee-U8C8FcSORw" field="TEXT" name="JOBHISTORY_ADDRESS" value="context.cdl_cluster_JobHistory"/>
+    <elementParameter xmi:id="_SpfEaJOrEee-U8C8FcSORw" field="CHECK" name="SET_STAGING_DIRECTORY" value="true"/>
+    <elementParameter xmi:id="_SpfEaZOrEee-U8C8FcSORw" field="TEXT" name="STAGING_DIRECTORY" value="context.cdl_cluster_StagingDirectory"/>
+    <elementParameter xmi:id="_SpfEapOrEee-U8C8FcSORw" field="TEXT" name="HDINSIGHT_ENDPOINT" value="&quot;https://xxxx.azurehdinsight.net&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEa5OrEee-U8C8FcSORw" field="TEXT" name="HDINSIGHT_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEbJOrEee-U8C8FcSORw" field="PASSWORD" name="HDINSIGHT_PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_SpfEbZOrEee-U8C8FcSORw" field="TEXT" name="LIVY_HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEbpOrEee-U8C8FcSORw" field="TEXT" name="LIVY_PORT" value="&quot;443&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEb5OrEee-U8C8FcSORw" field="TEXT" name="LIVY_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEcJOrEee-U8C8FcSORw" field="TEXT" name="HDINSIGHT_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEcZOrEee-U8C8FcSORw" field="PASSWORD" name="HDINSIGHT_PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_SpfEcpOrEee-U8C8FcSORw" field="TEXT" name="WASB_HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEc5OrEee-U8C8FcSORw" field="TEXT" name="WASB_CONTAINER" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEdJOrEee-U8C8FcSORw" field="TEXT" name="WASB_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEdZOrEee-U8C8FcSORw" field="PASSWORD" name="WASB_PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_SpfEdpOrEee-U8C8FcSORw" field="TEXT" name="REMOTE_FOLDER" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEd5OrEee-U8C8FcSORw" field="TEXT" name="SPARK_HOST" value="&quot;spark://localhost:7077&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEeJOrEee-U8C8FcSORw" field="TEXT" name="SPARK_HOME" value="&quot;/usr/lib/spark&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfEeZOrEee-U8C8FcSORw" field="CHECK" name="DEFINE_HADOOP_HOME_DIR" value="false"/>
+    <elementParameter xmi:id="_SpfEepOrEee-U8C8FcSORw" field="TEXT" name="HADOOP_HOME_DIR" value="&quot;C:/Talend/winutils&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqEJOrEee-U8C8FcSORw" field="CHECK" name="DEFINE_SPARK_DRIVER_HOST" value="false"/>
+    <elementParameter xmi:id="_SpfqEZOrEee-U8C8FcSORw" field="TEXT" name="SPARK_DRIVER_HOST" value="&quot;127.0.0.1&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqEpOrEee-U8C8FcSORw" field="CHECK" name="USE_KRB" value="true"/>
+    <elementParameter xmi:id="_SpfqE5OrEee-U8C8FcSORw" field="TEXT" name="RESOURCEMANAGER_PRINCIPAL" value="context.cdl_cluster_JTOrRMPrin"/>
+    <elementParameter xmi:id="_SpfqFJOrEee-U8C8FcSORw" field="TEXT" name="JOBHISTORY_PRINCIPAL" value="context.cdl_cluster_JobHistroyPrin"/>
+    <elementParameter xmi:id="_SpfqFZOrEee-U8C8FcSORw" field="CHECK" name="USE_KEYTAB" value="true"/>
+    <elementParameter xmi:id="_SpfqFpOrEee-U8C8FcSORw" field="TEXT" name="PRINCIPAL" value="context.cdl_cluster_Principal"/>
+    <elementParameter xmi:id="_SpfqF5OrEee-U8C8FcSORw" field="FILE" name="KEYTAB_PATH" value="context.cdl_cluster_KeyTab"/>
+    <elementParameter xmi:id="_SpfqGJOrEee-U8C8FcSORw" field="TEXT" name="USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqGZOrEee-U8C8FcSORw" field="CHECK" name="USE_MAPRTICKET" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfqGpOrEee-U8C8FcSORw" field="PASSWORD" name="MAPRTICKET_PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_SpfqG5OrEee-U8C8FcSORw" field="TEXT" name="MAPRTICKET_CLUSTER" value="&quot;demo.mapr.com&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqHJOrEee-U8C8FcSORw" field="TEXT" name="MAPRTICKET_DURATION" value="86400L" show="false"/>
+    <elementParameter xmi:id="_SpfqHZOrEee-U8C8FcSORw" field="CHECK" name="SET_MAPR_HOME_DIR" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfqHpOrEee-U8C8FcSORw" field="TEXT" name="MAPR_HOME_DIR" value="&quot;/opt/mapr&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqH5OrEee-U8C8FcSORw" field="CHECK" name="SET_HADOOP_LOGIN" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfqIJOrEee-U8C8FcSORw" field="TEXT" name="HADOOP_LOGIN" value="&quot;kerberos&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqIZOrEee-U8C8FcSORw" field="CHECK" name="ADVANCED_SETTINGS_CHECK" value="true"/>
+    <elementParameter xmi:id="_SpfqIpOrEee-U8C8FcSORw" field="TEXT" name="SPARK_DRIVER_MEM" value="&quot;512m&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqI5OrEee-U8C8FcSORw" field="TEXT" name="SPARK_DRIVER_CORES" value="&quot;1&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqJJOrEee-U8C8FcSORw" field="TEXT" name="SPARK_EXECUTOR_MEM" value="&quot;512m&quot;"/>
+    <elementParameter xmi:id="_SpfqJZOrEee-U8C8FcSORw" field="CHECK" name="SET_SPARK_EXECUTOR_MEM_OVERHEAD" value="false"/>
+    <elementParameter xmi:id="_SpfqJpOrEee-U8C8FcSORw" field="TEXT" name="SPARK_EXECUTOR_MEM_OVERHEAD" value="&quot;384&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqJ5OrEee-U8C8FcSORw" field="CHECK" name="SPARK_EXECUTOR_CORES_CHECK" value="false"/>
+    <elementParameter xmi:id="_SpfqKJOrEee-U8C8FcSORw" field="TEXT" name="SPARK_EXECUTOR_CORES" value="&quot;1&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqKZOrEee-U8C8FcSORw" field="CLOSED_LIST" name="SPARK_YARN_ALLOC_TYPE" value="AUTO"/>
+    <elementParameter xmi:id="_SpfqKpOrEee-U8C8FcSORw" field="TEXT" name="SPARK_EXECUTOR_INSTANCES" value="&quot;2&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqK5OrEee-U8C8FcSORw" field="TEXT" name="SPARK_YARN_DYN_INIT" value="&quot;1&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqLJOrEee-U8C8FcSORw" field="TEXT" name="SPARK_YARN_DYN_MIN" value="&quot;0&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqLZOrEee-U8C8FcSORw" field="TEXT" name="SPARK_YARN_DYN_MAX" value="&quot;MAX&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqLpOrEee-U8C8FcSORw" field="CHECK" name="WEB_UI_PORT_CHECK" value="false"/>
+    <elementParameter xmi:id="_SpfqL5OrEee-U8C8FcSORw" field="TEXT" name="WEB_UI_PORT" value="&quot;4040&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqMJOrEee-U8C8FcSORw" field="CLOSED_LIST" name="SPARK_BROADCAST_FACTORY" value="AUTO"/>
+    <elementParameter xmi:id="_SpfqMZOrEee-U8C8FcSORw" field="CHECK" name="CUSTOMIZE_SPARK_SERIALIZER" value="false"/>
+    <elementParameter xmi:id="_SpfqMpOrEee-U8C8FcSORw" field="TEXT" name="SPARK_SERIALIZER" value="&quot;org.apache.spark.serializer.JavaSerializer&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqM5OrEee-U8C8FcSORw" field="CHECK" name="ENABLE_SPARK_EVENT_LOGGING" value="false"/>
+    <elementParameter xmi:id="_SpfqNJOrEee-U8C8FcSORw" field="CHECK" name="COMPRESS_SPARK_EVENT_LOGS" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfqNZOrEee-U8C8FcSORw" field="TEXT" name="SPARK_EVENT_LOG_DIR" value="&quot;hdfs://namenode:8020/user/spark/applicationHistory&quot;&#xA;&#x9;&#x9;&#x9;" show="false"/>
+    <elementParameter xmi:id="_SpfqNpOrEee-U8C8FcSORw" field="TEXT" name="SPARKHISTORY_ADDRESS" value="&quot;sparkHistoryServer:18080&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqN5OrEee-U8C8FcSORw" field="CHECK" name="USE_CLOUDERA_NAVIGATOR" value="false"/>
+    <elementParameter xmi:id="_SpfqOJOrEee-U8C8FcSORw" field="TEXT" name="CLOUDERA_NAVIGATOR_USERNAME" value="&quot;username&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqOZOrEee-U8C8FcSORw" field="PASSWORD" name="CLOUDERA_NAVIGATOR_PASSWORD" value="PoLvNyVG2XWndNDdLn696A==" show="false"/>
+    <elementParameter xmi:id="_SpfqOpOrEee-U8C8FcSORw" field="TEXT" name="CLOUDERA_NAVIGATOR_URL" value="&quot;http://localhost:7187/api/v8/&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqO5OrEee-U8C8FcSORw" field="TEXT" name="CLOUDERA_NAVIGATOR_METADATA_URL" value="&quot;http://localhost:7187/api/v8/metadata/plugin&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqPJOrEee-U8C8FcSORw" field="TEXT" name="CLOUDERA_NAVIGATOR_CLIENT_URL" value="&quot;http://localhost&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqPZOrEee-U8C8FcSORw" field="CHECK" name="CLOUDERA_NAVIGATOR_AUTOCOMMIT" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfqPpOrEee-U8C8FcSORw" field="CHECK" name="CLOUDERA_NAVIGATOR_DISABLE_SSL_VALIDATION" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfqP5OrEee-U8C8FcSORw" field="CHECK" name="CLOUDERA_NAVIGATOR_DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter xmi:id="_SpfqQJOrEee-U8C8FcSORw" field="CHECK" name="USE_ATLAS" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfqQZOrEee-U8C8FcSORw" field="TEXT" name="ATLAS_URL" value="&quot;http://localhost:21000&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqQpOrEee-U8C8FcSORw" field="TEXT" name="ATLAS_USERNAME" value="&quot;admin&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqQ5OrEee-U8C8FcSORw" field="PASSWORD" name="ATLAS_PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter xmi:id="_SpfqRJOrEee-U8C8FcSORw" field="CHECK" name="SET_ATLAS_APPLICATION_PROPERTIES" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfqRZOrEee-U8C8FcSORw" field="TEXT" name="ATLAS_APPLICATION_PROPERTIES" value="&quot;/user/atlas/atlas-application.properties&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqRpOrEee-U8C8FcSORw" field="CHECK" name="ATLAS_DIE_ON_ERROR" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfqR5OrEee-U8C8FcSORw" field="TEXT" name="SPARK_SCRATCH_DIR" value="&quot;/tmp&quot;"/>
+    <elementParameter xmi:id="_SpfqSJOrEee-U8C8FcSORw" field="CHECK" name="USE_CHECKPOINT" value="false"/>
+    <elementParameter xmi:id="_SpfqSZOrEee-U8C8FcSORw" field="TEXT" name="CHECKPOINT_DIR" value="&quot;file:///tmp/mycheckpoint&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqSpOrEee-U8C8FcSORw" field="TABLE" name="SPARK_ADVANCED_PROPERTIES">
+      <elementValue xmi:id="_SpfqS5OrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;spark.yarn.queue&quot;"/>
+      <elementValue xmi:id="_SpfqTJOrEee-U8C8FcSORw" elementRef="VALUE" value="context.vQueueName"/>
+      <elementValue xmi:id="_SpfqTZOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;spark.scheduler.mode&quot;"/>
+      <elementValue xmi:id="_SpfqTpOrEee-U8C8FcSORw" elementRef="VALUE" value="context.vSchedulerMode"/>
+    </elementParameter>
+    <elementParameter xmi:id="_SxyqcJOrEee-U8C8FcSORw" field="CLOSED_LIST" name="SUPPORTED_SPARK_VERSION" value="SPARK_1_6_0"/>
+    <routinesParameter xmi:id="_SpfqT5OrEee-U8C8FcSORw" id="_m3b79BlKEeeJ1914flb4Yg" name="DQTechnical"/>
+    <routinesParameter xmi:id="_SpfqUJOrEee-U8C8FcSORw" id="_m3JBBBlKEeeJ1914flb4Yg" name="DataMasking"/>
+    <routinesParameter xmi:id="_SpfqUZOrEee-U8C8FcSORw" id="_my0hshlKEeeJ1914flb4Yg" name="DataOperation"/>
+    <routinesParameter xmi:id="_SpfqUpOrEee-U8C8FcSORw" id="_m3SK9BlKEeeJ1914flb4Yg" name="DataQualityDependencies"/>
+    <routinesParameter xmi:id="_SpfqU5OrEee-U8C8FcSORw" id="_m3SK8BlKEeeJ1914flb4Yg" name="DataQuality"/>
+    <routinesParameter xmi:id="_SpfqVJOrEee-U8C8FcSORw" id="_m3b78BlKEeeJ1914flb4Yg" name="DqStringHandling"/>
+    <routinesParameter xmi:id="_SpfqVZOrEee-U8C8FcSORw" id="_m2ZaIBlKEeeJ1914flb4Yg" name="Mathematical"/>
+    <routinesParameter xmi:id="_SpfqVpOrEee-U8C8FcSORw" id="_m2ZaJBlKEeeJ1914flb4Yg" name="Numeric"/>
+    <routinesParameter xmi:id="_SpfqV5OrEee-U8C8FcSORw" id="_m2ikExlKEeeJ1914flb4Yg" name="Relational"/>
+    <routinesParameter xmi:id="_SpfqWJOrEee-U8C8FcSORw" id="_m3b7-BlKEeeJ1914flb4Yg" name="SQLike"/>
+    <routinesParameter xmi:id="_SpfqWZOrEee-U8C8FcSORw" id="_m2sVEBlKEeeJ1914flb4Yg" name="StringHandling"/>
+    <routinesParameter xmi:id="_SpfqWpOrEee-U8C8FcSORw" id="_m22GEBlKEeeJ1914flb4Yg" name="TalendDataGenerator"/>
+    <routinesParameter xmi:id="_SpfqW5OrEee-U8C8FcSORw" id="_m22GFBlKEeeJ1914flb4Yg" name="TalendDate"/>
+    <routinesParameter xmi:id="_SpfqXJOrEee-U8C8FcSORw" id="_m3JBABlKEeeJ1914flb4Yg" name="TalendString"/>
+  </parameters>
+  <node xmi:id="_SpfqXZOrEee-U8C8FcSORw" componentName="tHDFSConfiguration" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="64">
+    <elementParameter xmi:id="_SpfqXpOrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="tHDFSConfiguration_1" show="false"/>
+    <elementParameter xmi:id="_SpfqX5OrEee-U8C8FcSORw" field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter xmi:id="_SpfqYJOrEee-U8C8FcSORw" field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_IK6HkEn6EeePFLrB05YKNg" show="false"/>
+    <elementParameter xmi:id="_SpfqYZOrEee-U8C8FcSORw" field="CLOSED_LIST" name="DISTRIBUTION" value="CLOUDERA"/>
+    <elementParameter xmi:id="_SpfqYpOrEee-U8C8FcSORw" field="CLOSED_LIST" name="DB_VERSION" value="Cloudera_CDH5_8"/>
+    <elementParameter xmi:id="_SpfqY5OrEee-U8C8FcSORw" field="HADOOP_DISTRIBUTION" name="HDFS" value=""/>
+    <elementParameter xmi:id="_SpfqZJOrEee-U8C8FcSORw" field="HADOOP_JARS_DIALOG" name="HADOOP_CUSTOM_JARS" value="" show="false"/>
+    <elementParameter xmi:id="_SpfqZZOrEee-U8C8FcSORw" field="TEXT" name="FS_DEFAULT_NAME" value="context.cdl_cluster_NameNodeUri"/>
+    <elementParameter xmi:id="_SpfqZpOrEee-U8C8FcSORw" field="CHECK" name="USE_KRB" value="true"/>
+    <elementParameter xmi:id="_SpfqZ5OrEee-U8C8FcSORw" field="TEXT" name="NAMENODE_PRINCIPAL" value="context.cdl_cluster_NameNodePrin"/>
+    <elementParameter xmi:id="_SpfqaJOrEee-U8C8FcSORw" field="CHECK" name="USE_KEYTAB" value="true"/>
+    <elementParameter xmi:id="_SpfqaZOrEee-U8C8FcSORw" field="TEXT" name="PRINCIPAL" value="context.cdl_cluster_Principal"/>
+    <elementParameter xmi:id="_SpfqapOrEee-U8C8FcSORw" field="FILE" name="KEYTAB_PATH" value="context.cdl_cluster_KeyTab"/>
+    <elementParameter xmi:id="_Spfqa5OrEee-U8C8FcSORw" field="TEXT" name="USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqbJOrEee-U8C8FcSORw" field="TEXT" name="GROUP" value="&quot;supergroup&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqbZOrEee-U8C8FcSORw" field="CHECK" name="USE_DATANODE_HOSTNAME" value="true"/>
+    <elementParameter xmi:id="_SpfqbpOrEee-U8C8FcSORw" field="TEXT" name="TEMP_FOLDER" value="&quot;/tmp&quot;"/>
+    <elementParameter xmi:id="_Spfqb5OrEee-U8C8FcSORw" field="CHECK" name="USE_HDFS_ENCRYPTION" value="false"/>
+    <elementParameter xmi:id="_SpfqcJOrEee-U8C8FcSORw" field="TEXT" name="HDFS_ENCRYPTION_KEY_PROVIDER" value="&quot;kms://http@localhost:16000/kms&quot;" show="false"/>
+    <elementParameter xmi:id="_SpfqcZOrEee-U8C8FcSORw" field="TABLE" name="HADOOP_ADVANCED_PROPERTIES">
+      <elementValue xmi:id="_SpfqcpOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.nameservices&quot;"/>
+      <elementValue xmi:id="_Spfqc5OrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_nameservices"/>
+      <elementValue xmi:id="_SpfqdJOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqdZOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;yarn.resourcemanager.ha.enabled&quot;"/>
+      <elementValue xmi:id="_SpfqdpOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_yarn_resourcemanager_ha_enabled"/>
+      <elementValue xmi:id="_Spfqd5OrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqeJOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;yarn.resourcemanager.ha.rm-ids&quot;"/>
+      <elementValue xmi:id="_SpfqeZOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_yarn_resourcemanager_ha_rm_ids"/>
+      <elementValue xmi:id="_SpfqepOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_Spfqe5OrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;yarn.resourcemanager.cluster-id&quot;"/>
+      <elementValue xmi:id="_SpfqfJOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_yarn_resourcemanager_cluster_id"/>
+      <elementValue xmi:id="_SpfqfZOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqfpOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.ha.namenodes.nameservice1&quot;"/>
+      <elementValue xmi:id="_Spfqf5OrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_ha_namenodes_nameservice1"/>
+      <elementValue xmi:id="_SpfqgJOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqgZOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.client.failover.proxy.provider.nameservice1&quot;"/>
+      <elementValue xmi:id="_SpfqgpOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_client_failover_proxy_provider_nameservice1"/>
+      <elementValue xmi:id="_Spfqg5OrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqhJOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.ha.automatic-failover.enabled.nameservice1&quot;"/>
+      <elementValue xmi:id="_SpfqhZOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice1"/>
+      <elementValue xmi:id="_SpfqhpOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_Spfqh5OrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.namenode.http-address.nameservice1.namenode95&quot;"/>
+      <elementValue xmi:id="_SpfqiJOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_namenode_http_address_nameservice1_namenode95"/>
+      <elementValue xmi:id="_SpfqiZOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqipOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.namenode.http-address.nameservice1.namenode187&quot;"/>
+      <elementValue xmi:id="_Spfqi5OrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_namenode_http_address_nameservice1_namenode187"/>
+      <elementValue xmi:id="_SpfqjJOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqjZOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.namenode.rpc-address.nameservice1.namenode187&quot;"/>
+      <elementValue xmi:id="_SpfqjpOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode187"/>
+      <elementValue xmi:id="_Spfqj5OrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqkJOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.namenode.rpc-address.nameservice1.namenode95&quot;"/>
+      <elementValue xmi:id="_SpfqkZOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_namenode_rpc_address_nameservice1_namenode95"/>
+      <elementValue xmi:id="_SpfqkpOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_Spfqk5OrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;yarn.resourcemanager.address.rm179&quot;"/>
+      <elementValue xmi:id="_SpfqlJOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_yarn_resourcemanager_address_rm179"/>
+      <elementValue xmi:id="_SpfqlZOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqlpOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;yarn.resourcemanager.address.rm172&quot;"/>
+      <elementValue xmi:id="_Spfql5OrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_yarn_resourcemanager_address_rm172"/>
+      <elementValue xmi:id="_SpfqmJOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqmZOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.ha.namenodes.nameservice-cdlpv2&quot;"/>
+      <elementValue xmi:id="_SpfqmpOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_ha_namenodes_nameservice_cdlpv2"/>
+      <elementValue xmi:id="_Spfqm5OrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqnJOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.client.failover.proxy.provider.nameservice-cdlpv2&quot;"/>
+      <elementValue xmi:id="_SpfqnZOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_client_failover_proxy_provider_nameservice_cdlpv2"/>
+      <elementValue xmi:id="_SpfqnpOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_Spfqn5OrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.ha.automatic-failover.enabled.nameservice-cdlpv2&quot;"/>
+      <elementValue xmi:id="_SpfqoJOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_ha_automatic_failover_enabled_nameservice_cdlpv2"/>
+      <elementValue xmi:id="_SpfqoZOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqopOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.namenode.http-address.nameservice-cdlpv2.namenode329&quot;"/>
+      <elementValue xmi:id="_Spfqo5OrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode329"/>
+      <elementValue xmi:id="_SpfqpJOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqpZOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.namenode.http-address.nameservice-cdlpv2.namenode186&quot;"/>
+      <elementValue xmi:id="_SpfqppOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_namenode_http_address_nameservice_cdlpv2_namenode186"/>
+      <elementValue xmi:id="_Spfqp5OrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqqJOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.namenode.rpc-address.nameservice-cdlpv2.namenode329&quot;"/>
+      <elementValue xmi:id="_SpfqqZOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode329"/>
+      <elementValue xmi:id="_SpfqqpOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_Spfqq5OrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;dfs.namenode.rpc-address.nameservice-cdlpv2.namenode186&quot;"/>
+      <elementValue xmi:id="_SpfqrJOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_dfs_namenode_rpc_address_nameservice_cdlpv2_namenode186"/>
+      <elementValue xmi:id="_SpfqrZOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqrpOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;yarn.resourcemanager.address.rm332&quot;"/>
+      <elementValue xmi:id="_Spfqr5OrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_yarn_resourcemanager_address_rm332"/>
+      <elementValue xmi:id="_SpfqsJOrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+      <elementValue xmi:id="_SpfqsZOrEee-U8C8FcSORw" elementRef="PROPERTY" value="&quot;yarn.resourcemanager.address.rm310&quot;"/>
+      <elementValue xmi:id="_SpfqspOrEee-U8C8FcSORw" elementRef="VALUE" value="context.cdl_cluster_yarn_resourcemanager_address_rm310"/>
+      <elementValue xmi:id="_Spfqs5OrEee-U8C8FcSORw" elementRef="BUILDIN" value=""/>
+    </elementParameter>
+    <elementParameter xmi:id="_SpfqtJOrEee-U8C8FcSORw" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node xmi:id="_SpfqtZOrEee-U8C8FcSORw" componentName="tAvroInput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="416">
+    <elementParameter xmi:id="_SpfqtpOrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="tAvroInput_2" show="false"/>
+    <elementParameter xmi:id="_Spfqt5OrEee-U8C8FcSORw" field="CHECK" name="DEFINE_STORAGE_CONFIGURATION" value="true"/>
+    <elementParameter xmi:id="_SpfquJOrEee-U8C8FcSORw" field="COMPONENT_LIST" name="STORAGE_CONFIGURATION" value="tHDFSConfiguration_1"/>
+    <elementParameter xmi:id="_SpfquZOrEee-U8C8FcSORw" field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter xmi:id="_SpfqupOrEee-U8C8FcSORw" field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_CGnh4CqVEeeMHI82fR62hw - polystar_raw_eu_roaming_loc_update" show="false"/>
+    <elementParameter xmi:id="_Spfqu5OrEee-U8C8FcSORw" field="BOTH_HADOOP" name="FILENAME" value="context.vHdfsRawTmpDir + context.vOutroamer_TmpStream + &quot;_&quot; + context.vTmpVal"/>
+    <elementParameter xmi:id="_SpfqvJOrEee-U8C8FcSORw" field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter xmi:id="_SpfqvZOrEee-U8C8FcSORw" field="LABEL" name="NOTE" value="NOTE : Only boolean, double, float, integer, byte, bytes, short, long, character, string, bigdecimal, date are currently supported&#xA;&#x9;&#x9;&#x9;"/>
+    <elementParameter xmi:id="_SpfqvpOrEee-U8C8FcSORw" field="CHECK" name="USE_MIN_PARTITIONS" value="false"/>
+    <elementParameter xmi:id="_Spfqv5OrEee-U8C8FcSORw" field="TEXT" name="MIN_PARTITIONS" value="2" show="false"/>
+    <elementParameter xmi:id="_SpfqwJOrEee-U8C8FcSORw" field="CHECK" name="USE_HIERARCHICAL" value="false"/>
+    <elementParameter xmi:id="_SpfqwZOrEee-U8C8FcSORw" field="TABLE" name="MAPPING" show="false">
+      <elementValue xmi:id="_SpfqwpOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="imsi"/>
+      <elementValue xmi:id="_Spfqw5OrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_SpfqxJOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="timestamp"/>
+      <elementValue xmi:id="_SpfqxZOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_SpfqxpOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="msisdn"/>
+      <elementValue xmi:id="_Spfqx5OrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_SpfqyJOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="opcode"/>
+      <elementValue xmi:id="_SpfqyZOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_SpfqypOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="origin_global_title_or_origin_realm"/>
+      <elementValue xmi:id="_Spfqy5OrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_SpfqzJOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="sequence_number"/>
+      <elementValue xmi:id="_SpfqzZOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_SpfqzpOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="subs_type"/>
+      <elementValue xmi:id="_Spfqz5OrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfq0JOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="subs_mcc"/>
+      <elementValue xmi:id="_Spfq0ZOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfq0pOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="subs_mnc"/>
+      <elementValue xmi:id="_Spfq05OrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfq1JOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="upd_type"/>
+      <elementValue xmi:id="_Spfq1ZOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfq1pOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="loc_type"/>
+      <elementValue xmi:id="_Spfq15OrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfq2JOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="loc_mcc"/>
+      <elementValue xmi:id="_Spfq2ZOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfq2pOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="loc_mnc"/>
+      <elementValue xmi:id="_Spfq25OrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfq3JOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="dt_timestamp"/>
+      <elementValue xmi:id="_Spfq3ZOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfq3pOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="tm_timestamp"/>
+      <elementValue xmi:id="_Spfq35OrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+    </elementParameter>
+    <elementParameter xmi:id="_Spfq4JOrEee-U8C8FcSORw" field="TEXT" name="LABEL" value="Raw_Location_Updates"/>
+    <elementParameter xmi:id="_Spfq4ZOrEee-U8C8FcSORw" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_Spfq4pOrEee-U8C8FcSORw" connector="FLOW" label="polystar_raw_eu_roaming_loc_update" name="tAvroInput_2">
+      <column xmi:id="_Spfq45OrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="imsi" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq5JOrEee-U8C8FcSORw" comment="Event Timestamp" key="false" length="14" name="timestamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq5ZOrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="msisdn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq5pOrEee-U8C8FcSORw" comment="OPCODE for Location Update and Cancellation" key="false" length="3" name="opcode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column xmi:id="_Spfq55OrEee-U8C8FcSORw" comment="Location Operator IMSI" key="false" length="33" name="origin_global_title_or_origin_realm" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq6JOrEee-U8C8FcSORw" comment="Unique Number" key="false" length="26" name="sequence_number" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq6ZOrEee-U8C8FcSORw" comment="Type of subscriber viz. LOCAL , EU , NONEU" key="false" length="10" name="subs_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq6pOrEee-U8C8FcSORw" comment="3 digit MCC code to identify the country of the subscriber." key="false" length="3" name="subs_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq65OrEee-U8C8FcSORw" comment="3 digit MNC code to identify the Service provider of the subscriber." key="false" length="3" name="subs_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq7JOrEee-U8C8FcSORw" comment="Type of update. LU - Location Update, CL - Location Cancellation" key="false" length="10" name="upd_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq7ZOrEee-U8C8FcSORw" comment="LOCAL , EU . NONEU" key="false" length="10" name="loc_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq7pOrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="loc_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq75OrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="loc_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq8JOrEee-U8C8FcSORw" comment="" key="false" length="10" name="dt_timestamp" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq8ZOrEee-U8C8FcSORw" comment="" key="false" length="8" name="tm_timestamp" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata xmi:id="_Spfq8pOrEee-U8C8FcSORw" connector="REJECT" label="polystar_raw_eu_roaming_loc_update" name="REJECT">
+      <column xmi:id="_Spfq85OrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="imsi" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq9JOrEee-U8C8FcSORw" comment="Event Timestamp" key="false" length="14" name="timestamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq9ZOrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="msisdn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq9pOrEee-U8C8FcSORw" comment="OPCODE for Location Update and Cancellation" key="false" length="3" name="opcode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column xmi:id="_Spfq95OrEee-U8C8FcSORw" comment="Location Operator IMSI" key="false" length="33" name="origin_global_title_or_origin_realm" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq-JOrEee-U8C8FcSORw" comment="Unique Number" key="false" length="26" name="sequence_number" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq-ZOrEee-U8C8FcSORw" comment="Type of subscriber viz. LOCAL , EU , NONEU" key="false" length="10" name="subs_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq-pOrEee-U8C8FcSORw" comment="3 digit MCC code to identify the country of the subscriber." key="false" length="3" name="subs_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq-5OrEee-U8C8FcSORw" comment="3 digit MNC code to identify the Service provider of the subscriber." key="false" length="3" name="subs_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq_JOrEee-U8C8FcSORw" comment="Type of update. LU - Location Update, CL - Location Cancellation" key="false" length="10" name="upd_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq_ZOrEee-U8C8FcSORw" comment="LOCAL , EU . NONEU" key="false" length="10" name="loc_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq_pOrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="loc_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfq_5OrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="loc_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrAJOrEee-U8C8FcSORw" comment="" key="false" length="10" name="dt_timestamp" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrAZOrEee-U8C8FcSORw" comment="" key="false" length="8" name="tm_timestamp" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrApOrEee-U8C8FcSORw" defaultValue="" key="false" length="255" name="inputLine" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column xmi:id="_SpfrA5OrEee-U8C8FcSORw" defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column xmi:id="_SpfrBJOrEee-U8C8FcSORw" defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata xmi:id="_SpfrBZOrEee-U8C8FcSORw" connector="VALIDATION_REJECT" label="metadata" name="VALIDATION_REJECT">
+      <column xmi:id="_SpfrBpOrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="IMSI" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrB5OrEee-U8C8FcSORw" comment="Event Timestamp" key="false" length="14" name="TIMESTAMP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrCJOrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="MSISDN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrCZOrEee-U8C8FcSORw" comment="OPCODE for Location Update and Cancellation" key="false" length="3" name="OPCODE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column xmi:id="_SpfrCpOrEee-U8C8FcSORw" comment="Location Operator IMSI" key="false" length="33" name="ORIGIN_GLOBAL_TITLE_OR_ORIGIN_REALM" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrC5OrEee-U8C8FcSORw" comment="Unique Number" key="false" length="26" name="SEQUENCE_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrDJOrEee-U8C8FcSORw" comment="Type of subscriber viz. LOCAL , EU , NONEU" key="false" length="10" name="SUBS_TYPE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrDZOrEee-U8C8FcSORw" comment="" key="false" length="0" name="SUBS_MCC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrDpOrEee-U8C8FcSORw" comment="" key="false" length="0" name="SUBS_MNC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrD5OrEee-U8C8FcSORw" comment="Type of update. LU - Location Update, CL - Location Cancellation" key="false" length="10" name="UPD_TYPE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrEJOrEee-U8C8FcSORw" comment="LOCAL , EU . NONEU" key="false" length="10" name="LOC_TYPE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrEZOrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="LOC_MCC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrEpOrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="LOC_MNC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrE5OrEee-U8C8FcSORw" comment="" key="false" length="15" name="INGESTION_TIMESTAMP" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrFJOrEee-U8C8FcSORw" comment="" key="false" length="4" name="ing_year" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrFZOrEee-U8C8FcSORw" comment="" key="false" length="2" name="ing_month" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrFpOrEee-U8C8FcSORw" comment="" key="false" length="2" name="ing_day" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrF5OrEee-U8C8FcSORw" comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node xmi:id="_SpfrGJOrEee-U8C8FcSORw" componentName="tFilterRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="416">
+    <elementParameter xmi:id="_SpfrGZOrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="tFilterRow_7" show="false"/>
+    <elementParameter xmi:id="_SpfrGpOrEee-U8C8FcSORw" field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter xmi:id="_SpfrG5OrEee-U8C8FcSORw" field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_CGnh4CqVEeeMHI82fR62hw - polystar_raw_eu_roaming_loc_update" show="false"/>
+    <elementParameter xmi:id="_SpfrHJOrEee-U8C8FcSORw" field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter xmi:id="_SpfrHZOrEee-U8C8FcSORw" field="TABLE" name="CONDITIONS">
+      <elementValue xmi:id="_SpfrHpOrEee-U8C8FcSORw" elementRef="INPUT_COLUMN" value="upd_type"/>
+      <elementValue xmi:id="_SpfrH5OrEee-U8C8FcSORw" elementRef="FUNCTION" value=""/>
+      <elementValue xmi:id="_SpfrIJOrEee-U8C8FcSORw" elementRef="OPERATOR" value="=="/>
+      <elementValue xmi:id="_SpfrIZOrEee-U8C8FcSORw" elementRef="RVALUE" value="&quot;LU&quot;"/>
+    </elementParameter>
+    <elementParameter xmi:id="_SpfrIpOrEee-U8C8FcSORw" field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter xmi:id="_SpfrI5OrEee-U8C8FcSORw" field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;&#x9;&#x9;&#x9;&#x9;//&#xA;&#x9;&#x9;&#x9;&#x9;input_row.columnName1.equals(&quot;foo&quot;)||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;&#x9;&#x9;&#x9;&#x9;// replace the following expression by your own filter condition&#xA;&#x9;&#x9;&#x9;&#x9;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;" show="false"/>
+    <elementParameter xmi:id="_SpfrJJOrEee-U8C8FcSORw" field="TEXT" name="LABEL" value="Filter_Cancellations"/>
+    <elementParameter xmi:id="_SpfrJZOrEee-U8C8FcSORw" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_SpfrJpOrEee-U8C8FcSORw" connector="FLOW" label="polystar_raw_eu_roaming_loc_update" name="tFilterRow_7">
+      <column xmi:id="_SpfrJ5OrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="imsi" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrKJOrEee-U8C8FcSORw" comment="Event Timestamp" key="false" length="14" name="timestamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrKZOrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="msisdn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrKpOrEee-U8C8FcSORw" comment="OPCODE for Location Update and Cancellation" key="false" length="3" name="opcode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column xmi:id="_SpfrK5OrEee-U8C8FcSORw" comment="Location Operator IMSI" key="false" length="33" name="origin_global_title_or_origin_realm" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrLJOrEee-U8C8FcSORw" comment="Unique Number" key="false" length="26" name="sequence_number" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrLZOrEee-U8C8FcSORw" comment="Type of subscriber viz. LOCAL , EU , NONEU" key="false" length="10" name="subs_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrLpOrEee-U8C8FcSORw" comment="3 digit MCC code to identify the country of the subscriber." key="false" length="3" name="subs_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrL5OrEee-U8C8FcSORw" comment="3 digit MNC code to identify the Service provider of the subscriber." key="false" length="3" name="subs_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrMJOrEee-U8C8FcSORw" comment="Type of update. LU - Location Update, CL - Location Cancellation" key="false" length="10" name="upd_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrMZOrEee-U8C8FcSORw" comment="LOCAL , EU . NONEU" key="false" length="10" name="loc_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrMpOrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="loc_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrM5OrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="loc_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrNJOrEee-U8C8FcSORw" comment="" key="false" length="10" name="dt_timestamp" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrNZOrEee-U8C8FcSORw" comment="" key="false" length="8" name="tm_timestamp" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata xmi:id="_SpfrNpOrEee-U8C8FcSORw" connector="FILTER" label="polystar_raw_eu_roaming_loc_update" name="FILTER">
+      <column xmi:id="_SpfrN5OrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="imsi" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrOJOrEee-U8C8FcSORw" comment="Event Timestamp" key="false" length="14" name="timestamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrOZOrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="msisdn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrOpOrEee-U8C8FcSORw" comment="OPCODE for Location Update and Cancellation" key="false" length="3" name="opcode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column xmi:id="_SpfrO5OrEee-U8C8FcSORw" comment="Location Operator IMSI" key="false" length="33" name="origin_global_title_or_origin_realm" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrPJOrEee-U8C8FcSORw" comment="Unique Number" key="false" length="26" name="sequence_number" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrPZOrEee-U8C8FcSORw" comment="Type of subscriber viz. LOCAL , EU , NONEU" key="false" length="10" name="subs_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrPpOrEee-U8C8FcSORw" comment="3 digit MCC code to identify the country of the subscriber." key="false" length="3" name="subs_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrP5OrEee-U8C8FcSORw" comment="3 digit MNC code to identify the Service provider of the subscriber." key="false" length="3" name="subs_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrQJOrEee-U8C8FcSORw" comment="Type of update. LU - Location Update, CL - Location Cancellation" key="false" length="10" name="upd_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrQZOrEee-U8C8FcSORw" comment="LOCAL , EU . NONEU" key="false" length="10" name="loc_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrQpOrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="loc_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrQ5OrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="loc_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrRJOrEee-U8C8FcSORw" comment="" key="false" length="10" name="dt_timestamp" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrRZOrEee-U8C8FcSORw" comment="" key="false" length="8" name="tm_timestamp" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata xmi:id="_SpfrRpOrEee-U8C8FcSORw" connector="REJECT" label="polystar_raw_eu_roaming_loc_update" name="REJECT">
+      <column xmi:id="_SpfrR5OrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="imsi" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrSJOrEee-U8C8FcSORw" comment="Event Timestamp" key="false" length="14" name="timestamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrSZOrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="msisdn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrSpOrEee-U8C8FcSORw" comment="OPCODE for Location Update and Cancellation" key="false" length="3" name="opcode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column xmi:id="_SpfrS5OrEee-U8C8FcSORw" comment="Location Operator IMSI" key="false" length="33" name="origin_global_title_or_origin_realm" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrTJOrEee-U8C8FcSORw" comment="Unique Number" key="false" length="26" name="sequence_number" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrTZOrEee-U8C8FcSORw" comment="Type of subscriber viz. LOCAL , EU , NONEU" key="false" length="10" name="subs_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrTpOrEee-U8C8FcSORw" comment="3 digit MCC code to identify the country of the subscriber." key="false" length="3" name="subs_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrT5OrEee-U8C8FcSORw" comment="3 digit MNC code to identify the Service provider of the subscriber." key="false" length="3" name="subs_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrUJOrEee-U8C8FcSORw" comment="Type of update. LU - Location Update, CL - Location Cancellation" key="false" length="10" name="upd_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrUZOrEee-U8C8FcSORw" comment="LOCAL , EU . NONEU" key="false" length="10" name="loc_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrUpOrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="loc_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrU5OrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="loc_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrVJOrEee-U8C8FcSORw" comment="" key="false" length="10" name="dt_timestamp" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrVZOrEee-U8C8FcSORw" comment="" key="false" length="8" name="tm_timestamp" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrVpOrEee-U8C8FcSORw" defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node xmi:id="_SpfrV5OrEee-U8C8FcSORw" componentName="tTopBy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="416">
+    <elementParameter xmi:id="_SpfrWJOrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="tTopBy_1" show="false"/>
+    <elementParameter xmi:id="_SpfrWZOrEee-U8C8FcSORw" field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter xmi:id="_SpfrWpOrEee-U8C8FcSORw" field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_CGnh4CqVEeeMHI82fR62hw - polystar_raw_eu_roaming_loc_update" show="false"/>
+    <elementParameter xmi:id="_SpfrW5OrEee-U8C8FcSORw" field="TEXT" name="TOP" value="1"/>
+    <elementParameter xmi:id="_SpfrXJOrEee-U8C8FcSORw" field="TABLE" name="KEY">
+      <elementValue xmi:id="_SpfrXZOrEee-U8C8FcSORw" elementRef="COLNAME" value="imsi"/>
+      <elementValue xmi:id="_SpfrXpOrEee-U8C8FcSORw" elementRef="COLNAME" value="loc_mcc"/>
+      <elementValue xmi:id="_SpfrX5OrEee-U8C8FcSORw" elementRef="COLNAME" value="loc_mnc"/>
+    </elementParameter>
+    <elementParameter xmi:id="_SpfrYJOrEee-U8C8FcSORw" field="TABLE" name="CRITERIA">
+      <elementValue xmi:id="_SpfrYZOrEee-U8C8FcSORw" elementRef="COLNAME" value="timestamp"/>
+      <elementValue xmi:id="_SpfrYpOrEee-U8C8FcSORw" elementRef="SORT" value="alpha"/>
+      <elementValue xmi:id="_SpfrY5OrEee-U8C8FcSORw" elementRef="ORDER" value="asc"/>
+    </elementParameter>
+    <elementParameter xmi:id="_SpfrZJOrEee-U8C8FcSORw" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_SpfrZZOrEee-U8C8FcSORw" connector="FLOW" label="polystar_raw_eu_roaming_loc_update" name="tTopBy_1">
+      <column xmi:id="_SpfrZpOrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="imsi" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrZ5OrEee-U8C8FcSORw" comment="Event Timestamp" key="false" length="14" name="timestamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfraJOrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="msisdn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfraZOrEee-U8C8FcSORw" comment="OPCODE for Location Update and Cancellation" key="false" length="3" name="opcode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column xmi:id="_SpfrapOrEee-U8C8FcSORw" comment="Location Operator IMSI" key="false" length="33" name="origin_global_title_or_origin_realm" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfra5OrEee-U8C8FcSORw" comment="Unique Number" key="false" length="26" name="sequence_number" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrbJOrEee-U8C8FcSORw" comment="Type of subscriber viz. LOCAL , EU , NONEU" key="false" length="10" name="subs_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrbZOrEee-U8C8FcSORw" comment="3 digit MCC code to identify the country of the subscriber." key="false" length="3" name="subs_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrbpOrEee-U8C8FcSORw" comment="3 digit MNC code to identify the Service provider of the subscriber." key="false" length="3" name="subs_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfrb5OrEee-U8C8FcSORw" comment="Type of update. LU - Location Update, CL - Location Cancellation" key="false" length="10" name="upd_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrcJOrEee-U8C8FcSORw" comment="LOCAL , EU . NONEU" key="false" length="10" name="loc_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrcZOrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="loc_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrcpOrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="loc_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfrc5OrEee-U8C8FcSORw" comment="" key="false" length="10" name="dt_timestamp" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrdJOrEee-U8C8FcSORw" comment="" key="false" length="8" name="tm_timestamp" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node xmi:id="_SpfrdZOrEee-U8C8FcSORw" componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="416">
+    <elementParameter xmi:id="_SpfrdpOrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
+    <elementParameter xmi:id="_Spfrd5OrEee-U8C8FcSORw" field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter xmi:id="_SpfreJOrEee-U8C8FcSORw" field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter xmi:id="_SpfreZOrEee-U8C8FcSORw" field="CHECK" name="REPLICATED_JOIN" value="false"/>
+    <elementParameter xmi:id="_SpfrepOrEee-U8C8FcSORw" field="IMAGE" name="PREVIEW" value="_8TvWkECIEeenMJNOwJ5VuQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter xmi:id="_Spfre5OrEee-U8C8FcSORw" field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter xmi:id="_SpfrfJOrEee-U8C8FcSORw" field="TEXT" name="LABEL" value="transformation"/>
+    <elementParameter xmi:id="_SpfrfZOrEee-U8C8FcSORw" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_SpfrfpOrEee-U8C8FcSORw" connector="FLOW" label="polystar_base_eu_roaming_tracking" name="tracking">
+      <column xmi:id="_Spfrf5OrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="imsi" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrgJOrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="msisdn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrgZOrEee-U8C8FcSORw" comment="3 digit MCC code to identify the country of the subscriber." key="false" length="3" name="subs_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrgpOrEee-U8C8FcSORw" comment="3 digit MNC code to identify the Service provider of the subscriber." key="false" length="3" name="subs_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfrg5OrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="loc_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrhJOrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="loc_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrhZOrEee-U8C8FcSORw" comment="LOCAL , EU . NONEU" key="false" length="10" name="loc_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrhpOrEee-U8C8FcSORw" comment="Event Start Timestamp" key="false" length="14" name="start_timestamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column xmi:id="_Spfrh5OrEee-U8C8FcSORw" comment="RF-REPORTED FLAG , CF -CANCELLED FLAG , DEFAULT -NULL" key="false" length="4" name="reporting_flg" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfriJOrEee-U8C8FcSORw" comment="Ingestion date and time." key="false" length="19" name="ingestion_timestamp" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="BIGINT" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData" xmi:id="_SpfriZOrEee-U8C8FcSORw">
+      <uiProperties xmi:id="_SpfripOrEee-U8C8FcSORw"/>
+      <varTables xmi:id="_Spfri5OrEee-U8C8FcSORw" sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables xmi:id="_SpfrjJOrEee-U8C8FcSORw" sizeState="INTERMEDIATE" name="tracking" expressionFilter="(tracking_snapshot.imsi  == null || tracking_snapshot.imsi.equals(&quot;&quot;)) || (( tracking_snapshot.imsi  != null &amp;&amp; (! tracking_snapshot.imsi.equals(&quot;&quot;)) ) &amp;&amp; ((! tracking_snapshot.loc_mcc.equalsIgnoreCase(location_updates.loc_mcc) ) || ( ! tracking_snapshot.loc_mnc.equalsIgnoreCase(location_updates.loc_mnc) )) &amp;&amp; (Long.parseLong(location_updates.timestamp) > tracking_snapshot.start_timestamp ))" activateExpressionFilter="true">
+        <mapperTableEntries xmi:id="_SpfrjZOrEee-U8C8FcSORw" name="imsi" expression="location_updates.imsi" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrjpOrEee-U8C8FcSORw" name="msisdn" expression="location_updates.msisdn" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_Spfrj5OrEee-U8C8FcSORw" name="subs_mcc" expression="location_updates.subs_mcc" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrkJOrEee-U8C8FcSORw" name="subs_mnc" expression="location_updates.subs_mnc" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrkZOrEee-U8C8FcSORw" name="loc_mcc" expression="location_updates.loc_mcc" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrkpOrEee-U8C8FcSORw" name="loc_mnc" expression="location_updates.loc_mnc" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_Spfrk5OrEee-U8C8FcSORw" name="loc_type" expression="location_updates.loc_type" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrlJOrEee-U8C8FcSORw" name="start_timestamp" expression="Long.parseLong(location_updates.timestamp) " type="id_Long" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrlZOrEee-U8C8FcSORw" name="reporting_flg" expression="&quot;&quot;" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrlpOrEee-U8C8FcSORw" name="ingestion_timestamp" expression="TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,TalendDate.getCurrentDate()) " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables xmi:id="_Spfrl5OrEee-U8C8FcSORw" sizeState="INTERMEDIATE" name="location_updates" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries xmi:id="_SpfrmJOrEee-U8C8FcSORw" name="imsi" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrmZOrEee-U8C8FcSORw" name="timestamp" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrmpOrEee-U8C8FcSORw" name="msisdn" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_Spfrm5OrEee-U8C8FcSORw" name="opcode" type="id_Integer" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrnJOrEee-U8C8FcSORw" name="origin_global_title_or_origin_realm" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrnZOrEee-U8C8FcSORw" name="sequence_number" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrnpOrEee-U8C8FcSORw" name="subs_type" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_Spfrn5OrEee-U8C8FcSORw" name="subs_mcc" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfroJOrEee-U8C8FcSORw" name="subs_mnc" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfroZOrEee-U8C8FcSORw" name="upd_type" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfropOrEee-U8C8FcSORw" name="loc_type" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_Spfro5OrEee-U8C8FcSORw" name="loc_mcc" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrpJOrEee-U8C8FcSORw" name="loc_mnc" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrpZOrEee-U8C8FcSORw" name="dt_timestamp" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrppOrEee-U8C8FcSORw" name="tm_timestamp" type="id_String" nullable="true"/>
+      </inputTables>
+      <inputTables xmi:id="_Spfrp5OrEee-U8C8FcSORw" sizeState="INTERMEDIATE" name="tracking_snapshot" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries xmi:id="_SpfrqJOrEee-U8C8FcSORw" name="imsi" expression="location_updates.imsi " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries xmi:id="_SpfrqZOrEee-U8C8FcSORw" name="msisdn" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrqpOrEee-U8C8FcSORw" name="subs_mcc" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_Spfrq5OrEee-U8C8FcSORw" name="subs_mnc" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrrJOrEee-U8C8FcSORw" name="loc_mcc" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrrZOrEee-U8C8FcSORw" name="loc_mnc" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrrpOrEee-U8C8FcSORw" name="loc_type" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_Spfrr5OrEee-U8C8FcSORw" name="start_timestamp" type="id_Long" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrsJOrEee-U8C8FcSORw" name="reporting_flg" type="id_String" nullable="true"/>
+        <mapperTableEntries xmi:id="_SpfrsZOrEee-U8C8FcSORw" name="ingestion_timestamp" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node xmi:id="_SpfrspOrEee-U8C8FcSORw" componentName="tAvroMultipleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="416">
+    <elementParameter xmi:id="_Spfrs5OrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="tAvroMultipleOutput_1" show="false"/>
+    <elementParameter xmi:id="_SpfrtJOrEee-U8C8FcSORw" field="CHECK" name="DEFINE_STORAGE_CONFIGURATION" value="true"/>
+    <elementParameter xmi:id="_SpfrtZOrEee-U8C8FcSORw" field="COMPONENT_LIST" name="STORAGE_CONFIGURATION" value="tHDFSConfiguration_1"/>
+    <elementParameter xmi:id="_SpfrtpOrEee-U8C8FcSORw" field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter xmi:id="_Spfrt5OrEee-U8C8FcSORw" field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_YfVI8CqYEeeMHI82fR62hw - polystar_base_eu_roaming_tracking" show="false"/>
+    <elementParameter xmi:id="_SpfruJOrEee-U8C8FcSORw" field="DIRECTORY_HADOOP" name="FOLDER" value="context.vHdfsBaseDir + context.vEuRoamerRetailTracking"/>
+    <elementParameter xmi:id="_SpfruZOrEee-U8C8FcSORw" field="TEXT" name="PARTITION_FIELDS" value="&quot;&quot;"/>
+    <elementParameter xmi:id="_SpfrupOrEee-U8C8FcSORw" field="LABEL" name="NOTE" value="NOTE : Only boolean, double, float, integer, byte, bytes, short, long, character,&#xA;&#x9;&#x9;&#x9; string, bigdecimal, date are currently supported.&#xA;&#x9;&#x9;&#x9;"/>
+    <elementParameter xmi:id="_Spfru5OrEee-U8C8FcSORw" field="CLOSED_LIST" name="FILE_ACTION" value="APPEND"/>
+    <elementParameter xmi:id="_SpfrvJOrEee-U8C8FcSORw" field="CLOSED_LIST" name="FILE_TYPE" value="com.databricks.spark.avro"/>
+    <elementParameter xmi:id="_SpfrvZOrEee-U8C8FcSORw" field="CHECK" name="COMPRESS" value="true"/>
+    <elementParameter xmi:id="_SpfrvpOrEee-U8C8FcSORw" field="CLOSED_LIST" name="COMPRESSION" value="SNAPPY"/>
+    <elementParameter xmi:id="_Spfrv5OrEee-U8C8FcSORw" field="CHECK" name="USE_KEYVALUE" value="false"/>
+    <elementParameter xmi:id="_SpfrwJOrEee-U8C8FcSORw" field="MEMO_IMPORT" name="IMPORT" value="import com.databricks.spark.avro.*;&#xA;import org.apache.spark.sql.*;"/>
+    <elementParameter xmi:id="_SpfrwZOrEee-U8C8FcSORw" field="TEXT" name="LABEL" value="Retail_outroamer_tracking"/>
+    <elementParameter xmi:id="_SpfrwpOrEee-U8C8FcSORw" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_Spfrw5OrEee-U8C8FcSORw" connector="FLOW" label="polystar_base_eu_roaming_tracking" name="tAvroMultipleOutput_1">
+      <column xmi:id="_SpfrxJOrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="imsi" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrxZOrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="msisdn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrxpOrEee-U8C8FcSORw" comment="3 digit MCC code to identify the country of the subscriber." key="false" length="3" name="subs_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfrx5OrEee-U8C8FcSORw" comment="3 digit MNC code to identify the Service provider of the subscriber." defaultValue="" key="false" length="3" name="subs_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfryJOrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="loc_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfryZOrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="loc_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrypOrEee-U8C8FcSORw" comment="" key="false" length="10" name="loc_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfry5OrEee-U8C8FcSORw" comment="Event Start Timestamp" key="false" length="14" name="start_timestamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column xmi:id="_SpfrzJOrEee-U8C8FcSORw" comment="RF-REPORTED FLAG , CF -CANCELLED FLAG , DEFAULT -NULL" key="false" length="4" name="reporting_flg" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfrzZOrEee-U8C8FcSORw" comment="Ingestion date and time." key="false" length="19" name="ingestion_timestamp" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node xmi:id="_SpfrzpOrEee-U8C8FcSORw" componentName="tAvroInput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="192">
+    <elementParameter xmi:id="_Spfrz5OrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="tAvroInput_3" show="false"/>
+    <elementParameter xmi:id="_Spfr0JOrEee-U8C8FcSORw" field="CHECK" name="DEFINE_STORAGE_CONFIGURATION" value="true"/>
+    <elementParameter xmi:id="_Spfr0ZOrEee-U8C8FcSORw" field="COMPONENT_LIST" name="STORAGE_CONFIGURATION" value="tHDFSConfiguration_1"/>
+    <elementParameter xmi:id="_Spfr0pOrEee-U8C8FcSORw" field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter xmi:id="_Spfr05OrEee-U8C8FcSORw" field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_YfVI8CqYEeeMHI82fR62hw - polystar_base_eu_roaming_tracking" show="false"/>
+    <elementParameter xmi:id="_Spfr1JOrEee-U8C8FcSORw" field="BOTH_HADOOP" name="FILENAME" value="context.vHdfsBaseDir + context.vEuRoamerRetailTracking"/>
+    <elementParameter xmi:id="_Spfr1ZOrEee-U8C8FcSORw" field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter xmi:id="_Spfr1pOrEee-U8C8FcSORw" field="LABEL" name="NOTE" value="NOTE : Only boolean, double, float, integer, byte, bytes, short, long, character, string, bigdecimal, date are currently supported&#xA;&#x9;&#x9;&#x9;"/>
+    <elementParameter xmi:id="_Spfr15OrEee-U8C8FcSORw" field="CHECK" name="USE_MIN_PARTITIONS" value="false"/>
+    <elementParameter xmi:id="_Spfr2JOrEee-U8C8FcSORw" field="TEXT" name="MIN_PARTITIONS" value="2" show="false"/>
+    <elementParameter xmi:id="_Spfr2ZOrEee-U8C8FcSORw" field="CHECK" name="USE_HIERARCHICAL" value="false"/>
+    <elementParameter xmi:id="_Spfr2pOrEee-U8C8FcSORw" field="TABLE" name="MAPPING" show="false">
+      <elementValue xmi:id="_Spfr25OrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="imsi"/>
+      <elementValue xmi:id="_Spfr3JOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfr3ZOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="msisdn"/>
+      <elementValue xmi:id="_Spfr3pOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfr35OrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="subs_mcc"/>
+      <elementValue xmi:id="_Spfr4JOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfr4ZOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="subs_mnc"/>
+      <elementValue xmi:id="_Spfr4pOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfr45OrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="loc_mcc"/>
+      <elementValue xmi:id="_Spfr5JOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfr5ZOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="loc_mnc"/>
+      <elementValue xmi:id="_Spfr5pOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfr55OrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="loc_type"/>
+      <elementValue xmi:id="_Spfr6JOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfr6ZOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="start_timestamp"/>
+      <elementValue xmi:id="_Spfr6pOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfr65OrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="reporting_flg"/>
+      <elementValue xmi:id="_Spfr7JOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+      <elementValue xmi:id="_Spfr7ZOrEee-U8C8FcSORw" elementRef="SCHEMA_COLUMN" value="ingestion_timestamp"/>
+      <elementValue xmi:id="_Spfr7pOrEee-U8C8FcSORw" elementRef="NODE_PATH" value="&quot;&quot;"/>
+    </elementParameter>
+    <elementParameter xmi:id="_Spfr75OrEee-U8C8FcSORw" field="TEXT" name="LABEL" value="Retail_Tracking_data"/>
+    <elementParameter xmi:id="_Spfr8JOrEee-U8C8FcSORw" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_Spfr8ZOrEee-U8C8FcSORw" connector="FLOW" label="polystar_base_eu_roaming_tracking" name="tAvroInput_3">
+      <column xmi:id="_Spfr8pOrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="imsi" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfr85OrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="msisdn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfr9JOrEee-U8C8FcSORw" comment="3 digit MCC code to identify the country of the subscriber." key="false" length="3" name="subs_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfr9ZOrEee-U8C8FcSORw" comment="3 digit MNC code to identify the Service provider of the subscriber." defaultValue="" key="false" length="3" name="subs_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfr9pOrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="loc_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfr95OrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="loc_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfr-JOrEee-U8C8FcSORw" comment="" key="false" length="10" name="loc_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfr-ZOrEee-U8C8FcSORw" comment="Event Start Timestamp" key="false" length="14" name="start_timestamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column xmi:id="_Spfr-pOrEee-U8C8FcSORw" comment="RF-REPORTED FLAG , CF -CANCELLED FLAG , DEFAULT -NULL" key="false" length="4" name="reporting_flg" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfr-5OrEee-U8C8FcSORw" comment="Ingestion date and time." key="false" length="19" name="ingestion_timestamp" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata xmi:id="_Spfr_JOrEee-U8C8FcSORw" connector="REJECT" label="polystar_base_eu_roaming_tracking" name="REJECT">
+      <column xmi:id="_Spfr_ZOrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="imsi" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfr_pOrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="msisdn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_Spfr_5OrEee-U8C8FcSORw" comment="3 digit MCC code to identify the country of the subscriber." key="false" length="3" name="subs_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsAJOrEee-U8C8FcSORw" comment="3 digit MNC code to identify the Service provider of the subscriber." defaultValue="" key="false" length="3" name="subs_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsAZOrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="loc_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsApOrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="loc_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsA5OrEee-U8C8FcSORw" comment="" key="false" length="10" name="loc_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsBJOrEee-U8C8FcSORw" comment="Event Start Timestamp" key="false" length="14" name="start_timestamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column xmi:id="_SpfsBZOrEee-U8C8FcSORw" comment="RF-REPORTED FLAG , CF -CANCELLED FLAG , DEFAULT -NULL" key="false" length="4" name="reporting_flg" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsBpOrEee-U8C8FcSORw" comment="Ingestion date and time." key="false" length="19" name="ingestion_timestamp" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsB5OrEee-U8C8FcSORw" defaultValue="" key="false" length="255" name="inputLine" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column xmi:id="_SpfsCJOrEee-U8C8FcSORw" defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column xmi:id="_SpfsCZOrEee-U8C8FcSORw" defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+    <metadata xmi:id="_SpfsCpOrEee-U8C8FcSORw" connector="VALIDATION_REJECT" label="metadata" name="VALIDATION_REJECT">
+      <column xmi:id="_SpfsC5OrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="IMSI" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsDJOrEee-U8C8FcSORw" comment="Event Timestamp" key="false" length="14" name="TIMESTAMP" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsDZOrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="MSISDN" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsDpOrEee-U8C8FcSORw" comment="OPCODE for Location Update and Cancellation" key="false" length="3" name="OPCODE" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column xmi:id="_SpfsD5OrEee-U8C8FcSORw" comment="Location Operator IMSI" key="false" length="33" name="ORIGIN_GLOBAL_TITLE_OR_ORIGIN_REALM" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsEJOrEee-U8C8FcSORw" comment="Unique Number" key="false" length="26" name="SEQUENCE_NUMBER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsEZOrEee-U8C8FcSORw" comment="Type of subscriber viz. LOCAL , EU , NONEU" key="false" length="10" name="SUBS_TYPE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsEpOrEee-U8C8FcSORw" comment="" key="false" length="0" name="SUBS_MCC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsE5OrEee-U8C8FcSORw" comment="" key="false" length="0" name="SUBS_MNC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsFJOrEee-U8C8FcSORw" comment="Type of update. LU - Location Update, CL - Location Cancellation" key="false" length="10" name="UPD_TYPE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsFZOrEee-U8C8FcSORw" comment="LOCAL , EU . NONEU" key="false" length="10" name="LOC_TYPE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsFpOrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="LOC_MCC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsF5OrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="LOC_MNC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsGJOrEee-U8C8FcSORw" comment="" key="false" length="15" name="INGESTION_TIMESTAMP" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsGZOrEee-U8C8FcSORw" comment="" key="false" length="4" name="ing_year" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsGpOrEee-U8C8FcSORw" comment="" key="false" length="2" name="ing_month" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsG5OrEee-U8C8FcSORw" comment="" key="false" length="2" name="ing_day" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsHJOrEee-U8C8FcSORw" comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="true" pattern="" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node xmi:id="_SpfsHZOrEee-U8C8FcSORw" componentName="tTopBy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="288">
+    <elementParameter xmi:id="_SpfsHpOrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="tTopBy_2" show="false"/>
+    <elementParameter xmi:id="_SpfsH5OrEee-U8C8FcSORw" field="TEXT" name="TOP" value="1"/>
+    <elementParameter xmi:id="_SpfsIJOrEee-U8C8FcSORw" field="TABLE" name="KEY">
+      <elementValue xmi:id="_SpfsIZOrEee-U8C8FcSORw" elementRef="COLNAME" value="imsi"/>
+    </elementParameter>
+    <elementParameter xmi:id="_SpfsIpOrEee-U8C8FcSORw" field="TABLE" name="CRITERIA">
+      <elementValue xmi:id="_SpfsI5OrEee-U8C8FcSORw" elementRef="COLNAME" value="start_timestamp"/>
+      <elementValue xmi:id="_SpfsJJOrEee-U8C8FcSORw" elementRef="SORT" value="num"/>
+      <elementValue xmi:id="_SpfsJZOrEee-U8C8FcSORw" elementRef="ORDER" value="desc"/>
+    </elementParameter>
+    <elementParameter xmi:id="_SpfsJpOrEee-U8C8FcSORw" field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata xmi:id="_SpfsJ5OrEee-U8C8FcSORw" connector="FLOW" label="polystar_base_eu_roaming_tracking" name="tTopBy_2">
+      <column xmi:id="_SpfsKJOrEee-U8C8FcSORw" comment="IMSI of Subscriber" key="false" length="15" name="imsi" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsKZOrEee-U8C8FcSORw" comment="MSISDN of Subscriber" key="false" length="11" name="msisdn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsKpOrEee-U8C8FcSORw" comment="3 digit MCC code to identify the country of the subscriber." key="false" length="3" name="subs_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsK5OrEee-U8C8FcSORw" comment="3 digit MNC code to identify the Service provider of the subscriber." defaultValue="" key="false" length="3" name="subs_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsLJOrEee-U8C8FcSORw" comment="Location MCC 3 digit" key="false" length="3" name="loc_mcc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsLZOrEee-U8C8FcSORw" comment="Location MNC 3 Digit" key="false" length="3" name="loc_mnc" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsLpOrEee-U8C8FcSORw" comment="" key="false" length="10" name="loc_type" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsL5OrEee-U8C8FcSORw" comment="Event Start Timestamp" key="false" length="14" name="start_timestamp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="BIGINT" type="id_Long" usefulColumn="true"/>
+      <column xmi:id="_SpfsMJOrEee-U8C8FcSORw" comment="RF-REPORTED FLAG , CF -CANCELLED FLAG , DEFAULT -NULL" key="false" length="4" name="reporting_flg" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column xmi:id="_SpfsMZOrEee-U8C8FcSORw" comment="Ingestion date and time." key="false" length="19" name="ingestion_timestamp" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection xmi:id="_SpfsMpOrEee-U8C8FcSORw" connectorName="FLOW" label="row1" lineStyle="0" metaname="tAvroInput_2" offsetLabelX="0" offsetLabelY="0" source="tAvroInput_2" target="tFilterRow_7">
+    <elementParameter xmi:id="_SpfsM5OrEee-U8C8FcSORw" field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter xmi:id="_SpfsNJOrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection xmi:id="_SpfsNZOrEee-U8C8FcSORw" connectorName="FILTER" label="row2" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_7" target="tTopBy_1">
+    <elementParameter xmi:id="_SpfsNpOrEee-U8C8FcSORw" field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter xmi:id="_SpfsN5OrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection xmi:id="_SpfsOJOrEee-U8C8FcSORw" connectorName="FLOW" label="location_updates" lineStyle="0" metaname="tTopBy_1" offsetLabelX="0" offsetLabelY="0" source="tTopBy_1" target="tMap_2">
+    <elementParameter xmi:id="_SpfsOZOrEee-U8C8FcSORw" field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter xmi:id="_SpfsOpOrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="location_updates" show="false"/>
+  </connection>
+  <connection xmi:id="_SpfsO5OrEee-U8C8FcSORw" connectorName="FLOW" label="tracking" lineStyle="0" metaname="tracking" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tAvroMultipleOutput_1">
+    <elementParameter xmi:id="_SpfsPJOrEee-U8C8FcSORw" field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue xmi:id="_SpfsPZOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN" value="reporting_flg"/>
+      <elementValue xmi:id="_SpfsPpOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue xmi:id="_SpfsP5OrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue xmi:id="_SpfsQJOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN" value="loc_mcc"/>
+      <elementValue xmi:id="_SpfsQZOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue xmi:id="_SpfsQpOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue xmi:id="_SpfsQ5OrEee-U8C8FcSORw" elementRef="TRACE_COLUMN" value="start_timestamp"/>
+      <elementValue xmi:id="_SpfsRJOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue xmi:id="_SpfsRZOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue xmi:id="_SpfsRpOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN" value="loc_mnc"/>
+      <elementValue xmi:id="_SpfsR5OrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue xmi:id="_SpfsSJOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue xmi:id="_SpfsSZOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN" value="subs_mnc"/>
+      <elementValue xmi:id="_SpfsSpOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue xmi:id="_SpfsS5OrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue xmi:id="_SpfsTJOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN" value="loc_type"/>
+      <elementValue xmi:id="_SpfsTZOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue xmi:id="_SpfsTpOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue xmi:id="_SpfsT5OrEee-U8C8FcSORw" elementRef="TRACE_COLUMN" value="imsi"/>
+      <elementValue xmi:id="_SpfsUJOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue xmi:id="_SpfsUZOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue xmi:id="_SpfsUpOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN" value="msisdn"/>
+      <elementValue xmi:id="_SpfsU5OrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue xmi:id="_SpfsVJOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue xmi:id="_SpfsVZOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN" value="subs_mcc"/>
+      <elementValue xmi:id="_SpfsVpOrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue xmi:id="_SpfsV5OrEee-U8C8FcSORw" elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter xmi:id="_SpfsWJOrEee-U8C8FcSORw" field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter xmi:id="_SpfsWZOrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="tracking" show="false"/>
+  </connection>
+  <connection xmi:id="_SpfsWpOrEee-U8C8FcSORw" connectorName="FLOW" label="row3" lineStyle="0" metaname="tAvroInput_3" offsetLabelX="0" offsetLabelY="0" source="tAvroInput_3" target="tTopBy_2">
+    <elementParameter xmi:id="_SpfsW5OrEee-U8C8FcSORw" field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter xmi:id="_SpfsXJOrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <connection xmi:id="_SpfsXZOrEee-U8C8FcSORw" connectorName="FLOW" label="tracking_snapshot" lineStyle="8" metaname="tTopBy_2" offsetLabelX="0" offsetLabelY="0" source="tTopBy_2" target="tMap_2">
+    <elementParameter xmi:id="_SpfsXpOrEee-U8C8FcSORw" field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter xmi:id="_SpfsX5OrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="tracking_snapshot" show="false"/>
+  </connection>
+  <subjob xmi:id="_SpfsYJOrEee-U8C8FcSORw">
+    <elementParameter xmi:id="_SpfsYZOrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="tHDFSConfiguration_1" show="false"/>
+    <elementParameter xmi:id="_SpfsYpOrEee-U8C8FcSORw" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_SpfsY5OrEee-U8C8FcSORw" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob xmi:id="_SpfsZJOrEee-U8C8FcSORw">
+    <elementParameter xmi:id="_SpfsZZOrEee-U8C8FcSORw" field="TEXT" name="UNIQUE_NAME" value="tAvroInput_2" show="false"/>
+    <elementParameter xmi:id="_SpfsZpOrEee-U8C8FcSORw" field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter xmi:id="_SpfsZ5OrEee-U8C8FcSORw" field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>

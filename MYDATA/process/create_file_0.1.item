@@ -4,7 +4,7 @@
     <contextParameter comment="" name="mdata_AdditionalParams" prompt="mdata_AdditionalParams?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="mdata_Database" prompt="mdata_Database?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="mydata"/>
     <contextParameter comment="" name="mdata_Login" prompt="mdata_Login?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="root"/>
-    <contextParameter comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_Password" value="S0DL+5b+FnhrSabJQFszOw=="/>
+    <contextParameter comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_Password" value="xpqr++CT+bg="/>
     <contextParameter comment="" name="mdata_Port" prompt="mdata_Port?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="3306"/>
     <contextParameter comment="" name="mdata_Server" prompt="mdata_Server?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="localhost"/>
   </context>
@@ -12,7 +12,7 @@
     <contextParameter comment="" name="mdata_AdditionalParams" prompt="mdata_AdditionalParams?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="mdata_Database" prompt="mdata_Database?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="mydata"/>
     <contextParameter comment="" name="mdata_Login" prompt="mdata_Login?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="root"/>
-    <contextParameter comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_Password" value="S0DL+5b+FnhrSabJQFszOw=="/>
+    <contextParameter comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_Password" value="xpqr++CT+bg="/>
     <contextParameter comment="" name="mdata_Port" prompt="mdata_Port?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="3306"/>
     <contextParameter comment="" name="mdata_Server" prompt="mdata_Server?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="localhost"/>
   </context>
@@ -20,7 +20,7 @@
     <contextParameter comment="" name="mdata_AdditionalParams" prompt="mdata_AdditionalParams?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="mdata_Database" prompt="mdata_Database?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="mydata"/>
     <contextParameter comment="" name="mdata_Login" prompt="mdata_Login?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="root"/>
-    <contextParameter comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_Password" value="S0DL+5b+FnhrSabJQFszOw=="/>
+    <contextParameter comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_Password" value="xpqr++CT+bg="/>
     <contextParameter comment="" name="mdata_Port" prompt="mdata_Port?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="3306"/>
     <contextParameter comment="" name="mdata_Server" prompt="mdata_Server?" promptNeeded="false" repositoryContextId="_3I04oHj2EeeCYMqEfIJM1Q" type="id_String" value="localhost"/>
   </context>

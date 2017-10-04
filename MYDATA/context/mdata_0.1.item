@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
   <talendfile:ContextType xmi:id="_eYPwcJMMEee-U8C8FcSORw" confirmationNeeded="false" name="Default">
-    <contextParameter xmi:id="_eYPwcZMMEee-U8C8FcSORw" comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" type="id_Password" value="S0DL+5b+FnhrSabJQFszOw=="/>
+    <contextParameter xmi:id="_eYPwcZMMEee-U8C8FcSORw" comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" type="id_Password" value="xpqr++CT+bg="/>
     <contextParameter xmi:id="_eYPwcpMMEee-U8C8FcSORw" comment="" name="mdata_Database" prompt="mdata_Database?" promptNeeded="false" type="id_String" value="mydata"/>
     <contextParameter xmi:id="_eYPwc5MMEee-U8C8FcSORw" comment="" name="mdata_AdditionalParams" prompt="mdata_AdditionalParams?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter xmi:id="_eYPwdJMMEee-U8C8FcSORw" comment="" name="mdata_Login" prompt="mdata_Login?" promptNeeded="false" type="id_String" value="root"/>
@@ -9,7 +9,7 @@
     <contextParameter xmi:id="_eYPwdpMMEee-U8C8FcSORw" comment="" name="mdata_Port" prompt="mdata_Port?" promptNeeded="false" type="id_String" value="3306"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_eYPwd5MMEee-U8C8FcSORw" confirmationNeeded="false" name="prod">
-    <contextParameter xmi:id="_eYPweJMMEee-U8C8FcSORw" comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" type="id_Password" value="S0DL+5b+FnhrSabJQFszOw=="/>
+    <contextParameter xmi:id="_eYPweJMMEee-U8C8FcSORw" comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" type="id_Password" value="xpqr++CT+bg="/>
     <contextParameter xmi:id="_eYPweZMMEee-U8C8FcSORw" comment="" name="mdata_Database" prompt="mdata_Database?" promptNeeded="false" type="id_String" value="mydata"/>
     <contextParameter xmi:id="_eYPwepMMEee-U8C8FcSORw" comment="" name="mdata_AdditionalParams" prompt="mdata_AdditionalParams?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter xmi:id="_eYPwe5MMEee-U8C8FcSORw" comment="" name="mdata_Login" prompt="mdata_Login?" promptNeeded="false" type="id_String" value="root"/>
@@ -17,7 +17,7 @@
     <contextParameter xmi:id="_eYPwfZMMEee-U8C8FcSORw" comment="" name="mdata_Port" prompt="mdata_Port?" promptNeeded="false" type="id_String" value="3306"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_eYPwfpMMEee-U8C8FcSORw" confirmationNeeded="false" name="test">
-    <contextParameter xmi:id="_eYPwf5MMEee-U8C8FcSORw" comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" type="id_Password" value="S0DL+5b+FnhrSabJQFszOw=="/>
+    <contextParameter xmi:id="_eYPwf5MMEee-U8C8FcSORw" comment="" name="mdata_Password" prompt="mdata_Password?" promptNeeded="false" type="id_Password" value="xpqr++CT+bg="/>
     <contextParameter xmi:id="_eYPwgJMMEee-U8C8FcSORw" comment="" name="mdata_Database" prompt="mdata_Database?" promptNeeded="false" type="id_String" value="mydata"/>
     <contextParameter xmi:id="_eYPwgZMMEee-U8C8FcSORw" comment="" name="mdata_AdditionalParams" prompt="mdata_AdditionalParams?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter xmi:id="_eYPwgpMMEee-U8C8FcSORw" comment="" name="mdata_Login" prompt="mdata_Login?" promptNeeded="false" type="id_String" value="root"/>

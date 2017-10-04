@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin" lastUpdate="2017-10-04T15:13:25.125+0200">
+<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin" lastUpdate="2017-10-04T15:13:33.993+0200">
   <deletedItems id="_veBzoHK1EeePoPBSEhwQkA" path="GoogleGeo" type="PROCESS"/>
   <deletedItems id="_vJcbAHBVEeeLfuyKROmHcg" path="GoogleGeo" type="PROCESS"/>
   <deletedItems id="_k24esHBYEeeLfuyKROmHcg" path="GoogleGeo" type="PROCESS"/>
@@ -33,4 +33,9 @@
   <deletedItems id="_lLuXoFAqEeeQDt3KGQMbWA" path="EU_ROAMING/base" type="PROCESS"/>
   <deletedItems id="_JEFfIE-IEeeH5tY_2jMaVQ" path="EU_ROAMING/base" type="PROCESS"/>
   <deletedItems id="_JILgIDusEeeO4ZI3BVzMSA" path="EU_ROAMING/base" type="PROCESS"/>
+  <deletedItems id="_8TvWkECIEeenMJNOwJ5VuQ" path="EU_ROAMING/base" type="PROCESS_MR"/>
+  <deletedItems id="_WJyEUCqMEeeMHI82fR62hw" path="EU_ROAMING/base" type="PROCESS_MR"/>
+  <deletedItems id="_Nra5UCm6EeeD3dsirZ-z_w" path="EU_ROAMING/base" type="PROCESS_MR"/>
+  <deletedItems id="_i-lTsCpkEeeMHI82fR62hw" path="EU_ROAMING/base" type="PROCESS_MR"/>
+  <deletedItems id="_Yi8SQE9mEeeVXvDW-WKhWg" path="EU_ROAMING/CASES/Telia_Optim_00073779" type="PROCESS_MR"/>
 </recyclebin:RecycleBin>

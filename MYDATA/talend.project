@@ -874,6 +874,10 @@
     <deletedFolders>process/my</deletedFolders>
     <deletedFolders>process/EU_ROAMING/base</deletedFolders>
     <deletedFolders>process/EU_ROAMING</deletedFolders>
+    <deletedFolders>process_mr/EU_ROAMING/base</deletedFolders>
+    <deletedFolders>process_mr/EU_ROAMING/CASES/Telia_Optim_00073779</deletedFolders>
+    <deletedFolders>process_mr/EU_ROAMING/CASES</deletedFolders>
+    <deletedFolders>process_mr/EU_ROAMING</deletedFolders>
     <migrationTask xmi:id="_JK_Q4JL-Eee-U8C8FcSORw" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_JK_Q4ZL-Eee-U8C8FcSORw" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_JK_Q4pL-Eee-U8C8FcSORw" id="org.talend.repository.model.migration.CleanFoldersMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>

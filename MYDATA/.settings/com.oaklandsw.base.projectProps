@@ -1,2 +1,9 @@
+/,com.oaklandsw.base,version,1
+Databases,com.oaklandsw.base,order,5
+Maps,com.oaklandsw.base,order,1
 Maps/GoogleLocationToFlat.xml,com.oaklandsw.base,references.0,Structures/GoogleJson.xml
 Maps/GoogleLocationToFlat.xml,com.oaklandsw.base,references.1,Structures/GooLocationsFlat.xml
+Namespace Containers,com.oaklandsw.base,order,4
+Reports,com.oaklandsw.base,order,7
+Sample Data,com.oaklandsw.base,order,6
+Structures,com.oaklandsw.base,order,0

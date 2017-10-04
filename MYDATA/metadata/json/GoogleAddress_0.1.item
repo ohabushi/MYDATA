@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_PnlDEHI_EeePoPBSEhwQkA" name="GoogleAddress" dataPackage="_PnlDFXI_EeePoPBSEhwQkA" JSONFilePath="C:/Users/ohabushi/OneDrive - Talend/Personal Doc/googledata/takeout-20170724T080512Z-001/Takeout/Location History/APIResponse/48.0470821_11.6574227.json" Encoding="UTF-8" readbyMode="XPATH">
+    <schema xmi:id="_PnlDEXI_EeePoPBSEhwQkA" LimitBoucle="50" AbsoluteXPathQuery="/root/results/address_components" flag="ROOT">
+      <schemaTargets xmi:id="_PnlDEnI_EeePoPBSEhwQkA" RelativeXPathQuery="long_name" TagName="long_name"/>
+      <schemaTargets xmi:id="_PnlDE3I_EeePoPBSEhwQkA" RelativeXPathQuery="types" TagName="types"/>
+      <schemaTargets xmi:id="_PnlDFHI_EeePoPBSEhwQkA" RelativeXPathQuery="../formatted_address" TagName="formatted_address"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_PnlDFXI_EeePoPBSEhwQkA" name="default" dataManager="_PnlDEHI_EeePoPBSEhwQkA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_PnlDFnI_EeePoPBSEhwQkA" id="_p76vAHI-EeePoPBSEhwQkA" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_PnlDF3I_EeePoPBSEhwQkA" label="long_name" length="100" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_PnlDGHI_EeePoPBSEhwQkA" label="types" length="100" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_PnlDGXI_EeePoPBSEhwQkA" label="formatted_address" length="200" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

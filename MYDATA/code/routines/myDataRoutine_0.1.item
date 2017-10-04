@@ -1,0 +1,124 @@
+package routines;
+import java.util.Calendar;
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.concurrent.TimeUnit;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
+import java.time.ZonedDateTime;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class myDataRoutine {
+
+    /**
+     * helloExample: not return value, only print "hello" + message.
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("world") input: The string need to be printed.
+     * 
+     * {example} helloExemple("world") # hello world !.
+     * @throws ParseException 
+     */
+    public static float getMonths(String min,String max) throws ParseException {
+    	SimpleDateFormat myFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+ 
+
+    	    Date date1 = myFormat.parse(min);
+    	    Date date2 = myFormat.parse(max);
+    	    long diff = date2.getTime() - date1.getTime();
+    	    System.out.println ("Days: " + TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS)/30);
+    	    return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS)/30;
+    }
+    public static String getStringFromEpoc(Long epoc) throws ParseException {
+    	
+ 
+    	String shorter_long = epoc.toString().substring(0, 10);
+    	//System.out.println(Long.parseLong(shorter_long));
+    	Instant i = Instant.ofEpochSecond(Long.parseLong(shorter_long));
+        ZonedDateTime z = ZonedDateTime.ofInstant(i, ZoneId.systemDefault());
+        //Date.from(java.time.ZonedDateTime.now().toInstant());
+   	    return DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss").format(z);
+    }
+    public static Date getDateFromEpoc(Long epoc) throws ParseException {
+    	
+    	 
+    	String shorter_long = epoc.toString().substring(0, 10);
+    	//System.out.println(Long.parseLong(shorter_long));
+    	Instant i = Instant.ofEpochSecond(Long.parseLong(shorter_long));
+        ZonedDateTime z = ZonedDateTime.ofInstant(i, ZoneId.systemDefault());
+        //Date.from(java.time.ZonedDateTime.now().toInstant());
+   	    return Date.from(z.toInstant());
+    }
+    public static String convertLongLat(String longlatE7) throws ParseException {
+    	
+   	 
+		//String longlatE7="-1048506151";
+		  //String longitudeE7="2118302";
+		  String [] lat=longlatE7.split("(?!^)");
+		  String lat0 = lat[0];
+		  String lat1 = lat[1];
+		  String lat2 = lat[2];
+		  String lat3 = lat[3];
+		  String lat4 = lat[4];
+		  String lat5 = lat[5];
+		  int currentLength=lat.length;
+		  String latIndex="";
+
+		  //Negative cooridnate 
+		  if(lat0.equals("-"))
+		  {
+
+		  	if (currentLength>10)
+		  			latIndex = "-"+lat1+lat2+lat3+"."+lat4+lat5+lat[6]+lat[7]+lat[8]+"50";
+		  	if (currentLength==10)
+		  			latIndex = "-"+lat1+lat2+"."+lat3+lat4+lat5+lat[6]+lat[7]+"50";
+		  	if (currentLength==9)
+		  			latIndex = "-"+lat1+"."+lat2+lat3+lat4+lat5+lat[6]+"50";
+		  	if (currentLength==8)
+		  		latIndex = "-0."+lat1+lat2+lat3+lat4+lat5+lat[6]+"5";
+		  }
+		  else
+		  {
+		  	if (currentLength>9)
+		  			latIndex = lat0+lat1+lat2+"."+lat3+lat4+lat5+lat[6]+lat[7]+"50";
+		  	if (currentLength==9)
+		  			latIndex = lat0+lat1+"."+lat2+lat3+lat4+lat5+lat[6]+"50";
+		  	if (currentLength==8)
+		  			latIndex = lat0+"."+lat1+lat2+lat3+lat4+lat5+"50";
+		  	if (currentLength==7)
+		  			latIndex = "0."+lat0+lat1+lat2+lat3+lat4+lat5+"5";
+		  }
+
+		  return latIndex;
+
+    }
+    
+    
+}

@@ -10,11 +10,4 @@
 		<nature>org.talend.core.talendnature</nature>
 		<nature>com.oaklandsw.transform.runtime.nature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>temp/script.jobscript</name>
-			<type>1</type>
-			<location>C:/Talend/6.4.1/cmdline/studio/script.txt</location>
-		</link>
-	</linkedResources>
 </projectDescription>

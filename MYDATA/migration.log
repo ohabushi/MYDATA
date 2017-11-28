@@ -1,0 +1,5 @@
+ ---=== Start Migration of project MYDATA ===---
+ * Task [Update MDM View Objects] : Applied successfully
+ * Task [Update MDM Process Objects] : Applied successfully
+ * Task [Remove MDM Reference Item Name] : Nothing to do
+ * Task [Update Operator MigrationTask] : Applied successfully
